@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93E524B921B7A27E0066FAAC /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E524B821B7A27E0066FAAC /* StateController.swift */; };
 		93FE193821B26ADC0082326C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193721B26ADC0082326C /* AppDelegate.swift */; };
-		93FE193A21B26ADC0082326C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193921B26ADC0082326C /* ViewController.swift */; };
+		93FE193A21B26ADC0082326C /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193921B26ADC0082326C /* QuestionViewController.swift */; };
 		93FE193D21B26ADC0082326C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93FE193B21B26ADC0082326C /* Main.storyboard */; };
 		93FE193F21B26ADD0082326C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93FE193E21B26ADD0082326C /* Assets.xcassets */; };
 		93FE194221B26ADD0082326C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93FE194021B26ADD0082326C /* LaunchScreen.storyboard */; };
+		93FE195021B51FD90082326C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE194F21B51FD90082326C /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93E524B821B7A27E0066FAAC /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010StateController.swift"; sourceTree = "<group>"; };
 		93FE193421B26ADC0082326C /* LifeHacksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeHacksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FE193721B26ADC0082326C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93FE193921B26ADC0082326C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93FE193921B26ADC0082326C /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		93FE193C21B26ADC0082326C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93FE193E21B26ADD0082326C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93FE194121B26ADD0082326C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93FE194321B26ADD0082326C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93FE194F21B51FD90082326C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				93FE193721B26ADC0082326C /* AppDelegate.swift */,
-				93FE193921B26ADC0082326C /* ViewController.swift */,
+				93FE193921B26ADC0082326C /* QuestionViewController.swift */,
 				93FE193B21B26ADC0082326C /* Main.storyboard */,
 				93FE193E21B26ADD0082326C /* Assets.xcassets */,
 				93FE194021B26ADD0082326C /* LaunchScreen.storyboard */,
 				93FE194321B26ADD0082326C /* Info.plist */,
+				93FE194F21B51FD90082326C /* Model.swift */,
+				93E524B821B7A27E0066FAAC /* StateController.swift */,
 			);
 			path = LifeHacksApp;
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93FE193A21B26ADC0082326C /* ViewController.swift in Sources */,
+				93FE195021B51FD90082326C /* Model.swift in Sources */,
+				93FE193A21B26ADC0082326C /* QuestionViewController.swift in Sources */,
+				93E524B921B7A27E0066FAAC /* StateController.swift in Sources */,
 				93FE193821B26ADC0082326C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
