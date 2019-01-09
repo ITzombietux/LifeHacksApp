@@ -33,6 +33,9 @@
                                                 <rect key="frame" x="17" y="0.0" width="24" height="24"/>
                                                 <color key="tintColor" name="Wedgewood"/>
                                                 <state key="normal" image="Arrow up"/>
+                                                <connections>
+                                                    <action selector="voteUp:" destination="Ovj-m0-lKu" eventType="touchUpInside" id="ULY-cz-zc0"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="9876" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d24-gv-pC7">
                                                 <rect key="frame" x="0.0" y="32" width="57.5" height="29"/>
@@ -44,6 +47,9 @@
                                                 <rect key="frame" x="17" y="69" width="24" height="24"/>
                                                 <color key="tintColor" name="Wedgewood"/>
                                                 <state key="normal" image="Arrow down"/>
+                                                <connections>
+                                                    <action selector="voteDown:" destination="Ovj-m0-lKu" eventType="touchUpInside" id="Xby-e8-c0k"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -66,7 +72,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wmq-Sp-fBe" userLabel="Owner Stack View">
                                 <rect key="frame" x="212.5" y="358" width="138.5" height="44"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="rDe-Cj-Nig" customClass="RoundImageView" customModule="Lifehacks" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="rDe-Cj-Nig" customClass="RoundImageView" customModule="LifeHacksApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="0WA-zL-bTB"/>

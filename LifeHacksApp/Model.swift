@@ -18,6 +18,14 @@ struct User {
 struct Question {
     let title: String
     let body: String
-    let score: Int
+    private (set) var score: Int
     let owner: User
+    
+    mutating func voteUp() {
+        score += 1
+    }
+    
+    mutating func voteDown() {
+        score -= 1
+    }
 }

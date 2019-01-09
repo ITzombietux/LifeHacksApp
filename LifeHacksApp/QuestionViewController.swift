@@ -21,14 +21,28 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let question = stateController.question
         titleLabel.text = question.title
         bodyLabel.text = question.body
-        scoreLabel.text = "\(question.score)"
+        updateScore(for: question)
+        
         let owner = question.owner
         ownerImageView.image = UIImage(named: owner.profileImage)
         ownerNameLabel.text = owner.name
+    }
+    
+    @IBAction func voteUp(_ sender: Any) {
+        stateController.question.voteUp()
+        updateScore(for: stateController.question)
+    }
+    
+    @IBAction func voteDown(_ sender: Any) {
+        stateController.question.voteDown()
+        updateScore(for: stateController.question)
+    }
+    
+    private func updateScore(for question: Question) {
+        scoreLabel.text = "\(question.score)"
     }
     
 }
