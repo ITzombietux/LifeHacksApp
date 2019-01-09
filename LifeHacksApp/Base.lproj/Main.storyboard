@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ovj-m0-lKu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vpb-ZC-ddF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Question View Controller-->
+        <!--Top Questions-->
         <scene sceneID="X3C-Lj-dsp">
             <objects>
                 <viewController id="Ovj-m0-lKu" customClass="QuestionViewController" customModule="Lifehacks" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,7 +72,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wmq-Sp-fBe" userLabel="Owner Stack View">
                                 <rect key="frame" x="212.5" y="358" width="138.5" height="44"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="rDe-Cj-Nig" customClass="RoundImageView" customModule="LifeHacksApp" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="rDe-Cj-Nig" customClass="Views" customModule="LifeHacksApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="0WA-zL-bTB"/>
@@ -124,6 +124,7 @@
                         <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
                         <viewLayoutGuide key="safeArea" id="P7y-JH-8f6"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Top Questions" image="Questions" id="ndu-LE-ajc"/>
                     <connections>
                         <outlet property="bodyLabel" destination="dwV-cT-0na" id="n1L-l6-M81"/>
                         <outlet property="ownerImageView" destination="rDe-Cj-Nig" id="Jxg-W6-cwQ"/>
@@ -134,12 +135,223 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzK-h6-SpU" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="135.38230884557723"/>
+            <point key="canvasLocation" x="1319.2" y="135.38230884557723"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="YEr-Bm-iTH">
+            <objects>
+                <viewController id="8a7-Hc-WgV" customClass="ProfileViewController" customModule="LifeHacksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="otr-Qb-bpI"/>
+                        <viewControllerLayoutGuide type="bottom" id="VhX-jE-uEB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R3U-ic-kQU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LKz-Kr-ReC" customClass="Views" customModule="Lifehacks" customModuleProvider="target">
+                                <rect key="frame" x="115.5" y="44" width="144" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="Tac-KP-qTi"/>
+                                    <constraint firstAttribute="height" constant="144" id="r5m-7a-pBh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="72"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="Wedgewood"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp7-2S-OXt">
+                                <rect key="frame" x="321" y="44" width="30" height="30"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sF6-ir-J8z" kind="presentation" id="ruB-Ko-Rr2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 reputation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k70-Gi-FLo">
+                                <rect key="frame" x="24" y="249" width="327" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" name="Gray Chateau"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdl-nj-LEH">
+                                <rect key="frame" x="24" y="212" width="327" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <color key="textColor" name="Cloud Burst"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNG-zy-tIR">
+                                <rect key="frame" x="24" y="292.5" width="327" height="134"/>
+                                <string key="text">The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together. This improvement upon the original usage was introduced by no less a man than Stubb, in order to afford the imperilled harpooneer the strongest possible guarantee for the faithfulness and vigilance of his monkey-rope holder.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="Cloud Burst"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LKz-Kr-ReC" firstAttribute="centerX" secondItem="R3U-ic-kQU" secondAttribute="centerX" id="048-aM-bsZ"/>
+                            <constraint firstItem="YNG-zy-tIR" firstAttribute="top" secondItem="k70-Gi-FLo" secondAttribute="bottom" constant="24" id="42E-hs-RsV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kdl-nj-LEH" secondAttribute="trailing" id="9Cy-Ar-UWp"/>
+                            <constraint firstItem="Vp7-2S-OXt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="R3U-ic-kQU" secondAttribute="leadingMargin" id="Cwf-Sx-JZ7"/>
+                            <constraint firstItem="k70-Gi-FLo" firstAttribute="leading" secondItem="R3U-ic-kQU" secondAttribute="leadingMargin" id="JgI-Vp-T1C"/>
+                            <constraint firstItem="Vp7-2S-OXt" firstAttribute="top" secondItem="R3U-ic-kQU" secondAttribute="topMargin" id="P8h-QH-bRI"/>
+                            <constraint firstItem="k70-Gi-FLo" firstAttribute="top" secondItem="kdl-nj-LEH" secondAttribute="bottom" constant="8" id="Vqd-WX-bVv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YNG-zy-tIR" secondAttribute="trailing" id="YB6-hr-016"/>
+                            <constraint firstItem="kdl-nj-LEH" firstAttribute="top" secondItem="LKz-Kr-ReC" secondAttribute="bottom" constant="24" id="dch-TD-lcJ"/>
+                            <constraint firstItem="LKz-Kr-ReC" firstAttribute="top" secondItem="R3U-ic-kQU" secondAttribute="topMargin" id="lke-dl-DDa"/>
+                            <constraint firstItem="kdl-nj-LEH" firstAttribute="leading" secondItem="R3U-ic-kQU" secondAttribute="leadingMargin" id="rG1-fc-32C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vp7-2S-OXt" secondAttribute="trailing" id="v2s-B8-krT"/>
+                            <constraint firstItem="YNG-zy-tIR" firstAttribute="leading" secondItem="R3U-ic-kQU" secondAttribute="leadingMargin" id="v8H-4c-7LB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k70-Gi-FLo" secondAttribute="trailing" id="yct-tA-DTC"/>
+                        </constraints>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
+                        <viewLayoutGuide key="safeArea" id="NyP-1y-pdv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="H9L-5O-1wq"/>
+                    <connections>
+                        <outlet property="aboutMeLabel" destination="YNG-zy-tIR" id="sMQ-cG-yBx"/>
+                        <outlet property="nameLabel" destination="kdl-nj-LEH" id="JU2-UM-9ce"/>
+                        <outlet property="profilePictureImageView" destination="LKz-Kr-ReC" id="Bih-bj-Mnw"/>
+                        <outlet property="reputationLabel" destination="k70-Gi-FLo" id="1rM-v1-Z0V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g10-zH-NYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1319.2" y="896.40179910044981"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gk0-Zd-8RZ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vpb-ZC-ddF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QZw-BO-YuT">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ovj-m0-lKu" kind="relationship" relationship="viewControllers" id="Ziv-r1-Rsm"/>
+                        <segue destination="8a7-Hc-WgV" kind="relationship" relationship="viewControllers" id="bs2-hd-U6b"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eiZ-oO-IXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="515.8920539730135"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="fiR-4L-Iu5">
+            <objects>
+                <viewController id="sF6-ir-J8z" customClass="EditProfileViewController" customModule="LifeHacksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tQO-D6-a6I"/>
+                        <viewControllerLayoutGuide type="bottom" id="mBB-Xn-6Pl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z3I-Bd-1vU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BjO-QP-YB9" customClass="RoundTextField" customModule="LifeHacksApp" customModuleProvider="target">
+                                <rect key="frame" x="24" y="98" width="327" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oc2-G2-a6E"/>
+                                </constraints>
+                                <color key="textColor" name="Cloud Burst"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="Gray Chateau"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mM6-Gc-vRQ">
+                                <rect key="frame" x="317" y="44" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="sF6-ir-J8z" eventType="touchUpInside" id="ahv-4q-F5h"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icy-aN-bQM" customClass="RoundTextView" customModule="LifeHacksApp" customModuleProvider="target">
+                                <rect key="frame" x="24" y="152" width="327" height="148"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="YXm-by-XTZ"/>
+                                </constraints>
+                                <color key="textColor" name="Cloud Burst"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="Gray Chateau"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dP-gy-l4x">
+                                <rect key="frame" x="24" y="44" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="sF6-ir-J8z" eventType="touchUpInside" id="bsT-At-JJK"/>
+                                    <action selector="save:" destination="sF6-ir-J8z" eventType="touchUpInside" id="wTw-ty-qir"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="icy-aN-bQM" firstAttribute="trailing" secondItem="Z3I-Bd-1vU" secondAttribute="trailingMargin" id="3ZS-Yu-onN"/>
+                            <constraint firstItem="mM6-Gc-vRQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Z3I-Bd-1vU" secondAttribute="leadingMargin" id="8Cf-zt-jXH"/>
+                            <constraint firstItem="icy-aN-bQM" firstAttribute="leading" secondItem="Z3I-Bd-1vU" secondAttribute="leadingMargin" id="Dvc-Qx-eHd"/>
+                            <constraint firstItem="5dP-gy-l4x" firstAttribute="top" secondItem="Z3I-Bd-1vU" secondAttribute="topMargin" id="Irf-GP-JgS"/>
+                            <constraint firstItem="mM6-Gc-vRQ" firstAttribute="trailing" secondItem="Z3I-Bd-1vU" secondAttribute="trailingMargin" id="Kc9-z1-cur"/>
+                            <constraint firstItem="icy-aN-bQM" firstAttribute="top" secondItem="BjO-QP-YB9" secondAttribute="bottom" constant="24" id="Lpw-T2-Nc8"/>
+                            <constraint firstItem="BjO-QP-YB9" firstAttribute="trailing" secondItem="Z3I-Bd-1vU" secondAttribute="trailingMargin" id="Nhw-fS-hm7"/>
+                            <constraint firstItem="mM6-Gc-vRQ" firstAttribute="top" secondItem="Z3I-Bd-1vU" secondAttribute="topMargin" id="Pdr-RG-MO1"/>
+                            <constraint firstItem="BjO-QP-YB9" firstAttribute="top" secondItem="5dP-gy-l4x" secondAttribute="bottom" constant="24" id="X6a-hP-sNK"/>
+                            <constraint firstItem="BjO-QP-YB9" firstAttribute="leading" secondItem="Z3I-Bd-1vU" secondAttribute="leadingMargin" id="a5T-o3-JLk"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5dP-gy-l4x" secondAttribute="trailingMargin" id="jBu-3r-tsg"/>
+                            <constraint firstItem="5dP-gy-l4x" firstAttribute="leading" secondItem="Z3I-Bd-1vU" secondAttribute="leadingMargin" id="nHp-ry-4IP"/>
+                        </constraints>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
+                        <viewLayoutGuide key="safeArea" id="CS3-fU-vfy"/>
+                    </view>
+                    <connections>
+                        <outlet property="aboutMeTextView" destination="icy-aN-bQM" id="fbK-Kn-nR5"/>
+                        <outlet property="nameTextField" destination="BjO-QP-YB9" id="3A7-Ge-I6g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ApL-YG-cm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2191" y="896"/>
         </scene>
     </scenes>
     <resources>
         <image name="Arrow down" width="24" height="24"/>
         <image name="Arrow up" width="24" height="24"/>
+        <image name="Profile" width="30" height="30"/>
+        <image name="Questions" width="30" height="30"/>
         <namedColor name="Cloud Burst">
             <color red="0.12156862745098039" green="0.18431372549019609" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

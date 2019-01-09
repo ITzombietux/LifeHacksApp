@@ -8,8 +8,35 @@
 
 import UIKit
 
-class RoundImageView: UIImageView {
+extension CGRect {
+    func shifted(by x: CGFloat) -> CGRect {
+        var newRect = self
+        newRect.origin.x += x
+        return newRect
+    }
+}
+
+@IBDesignable class RoundImageView: UIImageView {}
+
+@IBDesignable
+class RoundTextField: UITextField {
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.shifted(by: 12.0)
+    }
     
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.shifted(by: 12.0)
+    }
+}
+
+@IBDesignable class RoundTextView: UITextView {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    }
+}
+
+extension UIView {
     @IBInspectable
     var cornerRadius: CGFloat {
         get { return layer.cornerRadius }
@@ -35,5 +62,4 @@ class RoundImageView: UIImageView {
         }
         set { layer.borderColor = newValue?.cgColor }
     }
-
 }

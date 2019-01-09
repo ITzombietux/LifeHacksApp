@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		934E9D7E21E58E79009FB17C /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934E9D7D21E58E79009FB17C /* RoundImageView.swift */; };
+		934E9D7E21E58E79009FB17C /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934E9D7D21E58E79009FB17C /* Views.swift */; };
+		934E9D8021E5C979009FB17C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934E9D7F21E5C979009FB17C /* ProfileViewController.swift */; };
+		934E9D8221E5E38F009FB17C /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934E9D8121E5E38F009FB17C /* EditProfileViewController.swift */; };
 		93E524B921B7A27E0066FAAC /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E524B821B7A27E0066FAAC /* StateController.swift */; };
 		93FE193821B26ADC0082326C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193721B26ADC0082326C /* AppDelegate.swift */; };
 		93FE193A21B26ADC0082326C /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193921B26ADC0082326C /* QuestionViewController.swift */; };
@@ -18,7 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		934E9D7D21E58E79009FB17C /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		934E9D7D21E58E79009FB17C /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		934E9D7F21E5C979009FB17C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		934E9D8121E5E38F009FB17C /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		93E524B821B7A27E0066FAAC /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010StateController.swift"; sourceTree = "<group>"; };
 		93FE193421B26ADC0082326C /* LifeHacksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeHacksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FE193721B26ADC0082326C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,14 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				93FE193721B26ADC0082326C /* AppDelegate.swift */,
-				93FE193921B26ADC0082326C /* QuestionViewController.swift */,
 				93FE193B21B26ADC0082326C /* Main.storyboard */,
 				93FE193E21B26ADD0082326C /* Assets.xcassets */,
 				93FE194021B26ADD0082326C /* LaunchScreen.storyboard */,
 				93FE194321B26ADD0082326C /* Info.plist */,
+				93FE193921B26ADC0082326C /* QuestionViewController.swift */,
 				93FE194F21B51FD90082326C /* Model.swift */,
 				93E524B821B7A27E0066FAAC /* StateController.swift */,
-				934E9D7D21E58E79009FB17C /* RoundImageView.swift */,
+				934E9D7D21E58E79009FB17C /* Views.swift */,
+				934E9D7F21E5C979009FB17C /* ProfileViewController.swift */,
+				934E9D8121E5E38F009FB17C /* EditProfileViewController.swift */,
 			);
 			path = LifeHacksApp;
 			sourceTree = "<group>";
@@ -144,11 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				934E9D7E21E58E79009FB17C /* RoundImageView.swift in Sources */,
+				934E9D8021E5C979009FB17C /* ProfileViewController.swift in Sources */,
+				934E9D7E21E58E79009FB17C /* Views.swift in Sources */,
 				93FE195021B51FD90082326C /* Model.swift in Sources */,
 				93FE193A21B26ADC0082326C /* QuestionViewController.swift in Sources */,
 				93E524B921B7A27E0066FAAC /* StateController.swift in Sources */,
 				93FE193821B26ADC0082326C /* AppDelegate.swift in Sources */,
+				934E9D8221E5E38F009FB17C /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
