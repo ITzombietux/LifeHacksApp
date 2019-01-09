@@ -17,12 +17,18 @@ class ProfileViewController: UIViewController {
     
     fileprivate let stateController = StateController()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         let user = stateController.user
         profilePictureImageView.image = UIImage(named: user.profileImage)
         nameLabel.text = user.name
         reputationLabel.text = "\(user.reputation)"
         aboutMeLabel.text = user.aboutMe
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? EditProfileViewController {
+           destination.stateController = stateController
+        }
     }
 }
