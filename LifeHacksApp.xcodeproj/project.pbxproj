@@ -14,6 +14,7 @@
 		93B18FC521E647BD006DA8DC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FC421E647BD006DA8DC /* MainTabBarController.swift */; };
 		93B18FC721E730ED006DA8DC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FC621E730ED006DA8DC /* UIColor.swift */; };
 		93B18FC921E7317D006DA8DC /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FC821E7317D006DA8DC /* UINavigationBar.swift */; };
+		93B18FCB21E78250006DA8DC /* TopQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FCA21E78250006DA8DC /* TopQuestionsViewController.swift */; };
 		93E524B921B7A27E0066FAAC /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E524B821B7A27E0066FAAC /* StateController.swift */; };
 		93FE193821B26ADC0082326C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193721B26ADC0082326C /* AppDelegate.swift */; };
 		93FE193A21B26ADC0082326C /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193921B26ADC0082326C /* QuestionViewController.swift */; };
@@ -31,6 +32,7 @@
 		93B18FC421E647BD006DA8DC /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		93B18FC621E730ED006DA8DC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		93B18FC821E7317D006DA8DC /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		93B18FCA21E78250006DA8DC /* TopQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopQuestionsViewController.swift; sourceTree = "<group>"; };
 		93E524B821B7A27E0066FAAC /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010StateController.swift"; sourceTree = "<group>"; };
 		93FE193421B26ADC0082326C /* LifeHacksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeHacksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FE193721B26ADC0082326C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				93B18FC421E647BD006DA8DC /* MainTabBarController.swift */,
 				93B18FC621E730ED006DA8DC /* UIColor.swift */,
 				93B18FC821E7317D006DA8DC /* UINavigationBar.swift */,
+				93B18FCA21E78250006DA8DC /* TopQuestionsViewController.swift */,
 			);
 			path = LifeHacksApp;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B18FCB21E78250006DA8DC /* TopQuestionsViewController.swift in Sources */,
 				934E9D8021E5C979009FB17C /* ProfileViewController.swift in Sources */,
 				93B18FC321E643BC006DA8DC /* Stateful.swift in Sources */,
 				93B18FC521E647BD006DA8DC /* MainTabBarController.swift in Sources */,
