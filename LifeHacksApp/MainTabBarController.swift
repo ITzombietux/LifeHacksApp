@@ -9,7 +9,6 @@
 import UIKit
 
 class MainTabBarController: UITabBarController, Stateful {
-
     var stateController: StateController? = StateController()
     
     required init?(coder aDecoder: NSCoder) {
@@ -22,5 +21,7 @@ class MainTabBarController: UITabBarController, Stateful {
                 passState(to: rootViewController)
             }
         }
+        
+        print(viewControllers)
     }
 }
