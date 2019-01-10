@@ -233,10 +233,10 @@
             </objects>
             <point key="canvasLocation" x="2190" y="896"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="gk0-Zd-8RZ">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vpb-ZC-ddF" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vpb-ZC-ddF" customClass="MainTabBarController" customModule="LifeHacksApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QZw-BO-YuT">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
