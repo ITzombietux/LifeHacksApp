@@ -8,19 +8,30 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController {
-    
+protocol EditProfileViewControllerDelegate: class {
+    func editProfileViewControllerDidEditProfileInfo(_ viewController: EditProfileViewController)
+}
+
+class EditProfileViewController: UIViewController, Stateful {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var aboutMeTextView: UITextView!
     
     var stateController: StateController?
+    weak var delegate: EditProfileViewControllerDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let user = stateController?.user
+        nameTextField.text = user?.name
+        aboutMeTextView.text = user?.aboutMe
+    }
     
     @IBAction func save(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
-        
-        if let stateController = stateController, let name = nameTextField.text, let aboutMe = aboutMeTextView.text, !name.isEmpty && !aboutMe.isEmpty {
+        if let stateController = stateController, let name = nameTextField.text, let aboutMe = aboutMeTextView.text,
+            !name.isEmpty && !aboutMe.isEmpty {
             let oldUser = stateController.user
             stateController.user = User(name: name, aboutMe: aboutMe, profileImage: oldUser.profileImage, reputation: oldUser.reputation)
+            delegate?.editProfileViewControllerDidEditProfileInfo(self)
             dismiss(animated: true, completion: nil)
         } else {
             let title = "Missing name or about me"
@@ -35,12 +46,5 @@ class EditProfileViewController: UIViewController {
     @IBAction func cancel(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let user = stateController?.user
-        nameTextField.text = user?.name
-        aboutMeTextView.text = user?.aboutMe
-        
-    }
 }
+

@@ -9,7 +9,6 @@
 import UIKit
 
 class QuestionViewController: UIViewController, Stateful {
-
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -20,14 +19,12 @@ class QuestionViewController: UIViewController, Stateful {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         guard let question = stateController?.question else {
             return
         }
         titleLabel.text = question.title
         bodyLabel.text = question.body
         updateScore(for: question)
-        
         let owner = question.owner
         ownerImageView.image = UIImage(named: owner.profileImage)
         ownerNameLabel.text = owner.name
@@ -40,12 +37,12 @@ class QuestionViewController: UIViewController, Stateful {
         }
     }
     
-    @IBAction func voteUp(_ sender: Any) {
+    @IBAction func voteUp(_ sender: AnyObject) {
         stateController?.question.voteUp()
         updateScore(for: stateController?.question)
     }
     
-    @IBAction func voteDown(_ sender: Any) {
+    @IBAction func voteDown(_ sender: AnyObject) {
         stateController?.question.voteDown()
         updateScore(for: stateController?.question)
     }
@@ -53,6 +50,6 @@ class QuestionViewController: UIViewController, Stateful {
     private func updateScore(for question: Question?) {
         scoreLabel.text = "\(question?.score ?? 0)"
     }
-    
 }
+
 

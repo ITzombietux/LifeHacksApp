@@ -9,7 +9,6 @@
 import UIKit
 
 class ProfileViewController: UIViewController, Stateful {
-
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var reputationLabel: UILabel!
@@ -29,9 +28,15 @@ class ProfileViewController: UIViewController, Stateful {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let navigationController = segue.destination as? UINavigationController,
-            let destination = navigationController.viewControllers.first as? Stateful {
+        guard let navigationController = segue.destination as? UINavigationController else {
+            return
+        }
+        let destination = navigationController.viewControllers.first
+        if let destination = destination as? Stateful {
             passState(to: destination)
+        }
+        if let destination = destination as? EditProfileViewController {
+            destination.delegate = self
         }
     }
     
@@ -40,5 +45,13 @@ class ProfileViewController: UIViewController, Stateful {
         nameLabel.text = user.name
         reputationLabel.text = "\(user.reputation)"
         aboutMeLabel.text = user.aboutMe
+    }
+}
+
+extension ProfileViewController: EditProfileViewControllerDelegate {
+    func editProfileViewControllerDidEditProfileInfo(_ viewController: EditProfileViewController) {
+        nameLabel.textColor = UIColor.orange
+        reputationLabel.textColor = UIColor.orange
+        aboutMeLabel.textColor = UIColor.orange
     }
 }

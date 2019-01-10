@@ -14,7 +14,7 @@
         <!--Question-->
         <scene sceneID="X3C-Lj-dsp">
             <objects>
-                <viewController id="Ovj-m0-lKu" customClass="QuestionViewController" customModule="LifeHacksApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Question" id="Ovj-m0-lKu" customClass="QuestionViewController" customModule="LifeHacksApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N13-b2-wwA"/>
                         <viewControllerLayoutGuide type="bottom" id="RkX-Tr-mZn"/>
@@ -33,9 +33,6 @@
                                                 <rect key="frame" x="17" y="0.0" width="24" height="24"/>
                                                 <color key="tintColor" name="Wedgewood"/>
                                                 <state key="normal" image="Arrow up"/>
-                                                <connections>
-                                                    <action selector="voteUp:" destination="Ovj-m0-lKu" eventType="touchUpInside" id="ULY-cz-zc0"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="9876" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d24-gv-pC7">
                                                 <rect key="frame" x="0.0" y="32" width="57.5" height="29"/>
@@ -47,9 +44,6 @@
                                                 <rect key="frame" x="17" y="69" width="24" height="24"/>
                                                 <color key="tintColor" name="Wedgewood"/>
                                                 <state key="normal" image="Arrow down"/>
-                                                <connections>
-                                                    <action selector="voteDown:" destination="Ovj-m0-lKu" eventType="touchUpInside" id="Xby-e8-c0k"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -137,11 +131,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Question" id="dI5-VV-usJ"/>
                     <connections>
-                        <outlet property="bodyLabel" destination="dwV-cT-0na" id="n1L-l6-M81"/>
-                        <outlet property="ownerImageView" destination="rDe-Cj-Nig" id="Jxg-W6-cwQ"/>
-                        <outlet property="ownerNameLabel" destination="nrX-Yc-cRk" id="gAB-Bl-xKt"/>
-                        <outlet property="scoreLabel" destination="d24-gv-pC7" id="QEy-uN-g1p"/>
-                        <outlet property="titleLabel" destination="2t9-B6-98A" id="Rra-9g-mFB"/>
+                        <outlet property="bodyLabel" destination="dwV-cT-0na" id="utx-Pe-kxK"/>
+                        <outlet property="ownerImageView" destination="rDe-Cj-Nig" id="fPt-fd-uic"/>
+                        <outlet property="ownerNameLabel" destination="nrX-Yc-cRk" id="LbO-ve-ZB2"/>
+                        <outlet property="scoreLabel" destination="d24-gv-pC7" id="W1t-gL-Evg"/>
+                        <outlet property="titleLabel" destination="2t9-B6-98A" id="k2p-7g-rtd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzK-h6-SpU" sceneMemberID="firstResponder"/>
@@ -216,7 +210,7 @@
                         <viewLayoutGuide key="safeArea" id="NyP-1y-pdv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="eFp-nI-vZS">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="Aui-u4-4tJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Aui-u4-4tJ">
                             <connections>
                                 <segue destination="pRC-uD-vOt" kind="presentation" id="Dfr-D8-wEN"/>
                             </connections>
@@ -225,7 +219,7 @@
                     <connections>
                         <outlet property="aboutMeLabel" destination="YNG-zy-tIR" id="sMQ-cG-yBx"/>
                         <outlet property="nameLabel" destination="kdl-nj-LEH" id="JU2-UM-9ce"/>
-                        <outlet property="profilePictureImageView" destination="LKz-Kr-ReC" id="Bih-bj-Mnw"/>
+                        <outlet property="profilePictureImageView" destination="LKz-Kr-ReC" id="wMX-dh-aaH"/>
                         <outlet property="reputationLabel" destination="k70-Gi-FLo" id="1rM-v1-Z0V"/>
                     </connections>
                 </viewController>
@@ -412,6 +406,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="svw-Gv-ISs"/>
+        <segue reference="cME-Ly-5vv"/>
     </inferredMetricsTieBreakers>
 </document>
