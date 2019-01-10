@@ -11,8 +11,7 @@ import UIKit
 class MainTabBarController: UITabBarController, Stateful {
     var stateController: StateController? = StateController()
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    override func viewDidLoad() {
         guard let viewControllers = viewControllers else {
             return
         }
@@ -21,7 +20,5 @@ class MainTabBarController: UITabBarController, Stateful {
                 passState(to: rootViewController)
             }
         }
-        
-        print(viewControllers)
     }
 }
