@@ -11,6 +11,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Top Questions-->
+        <scene sceneID="hv0-uW-tpa">
+            <objects>
+                <viewController id="7ZX-Vq-HRE" customClass="TopQuestionsViewController" customModule="LifeHacksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Zs-oE-Vwa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zyu-Tc-80t">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Zyu-Tc-80t" secondAttribute="bottom" id="II5-rH-ckW"/>
+                            <constraint firstItem="Zyu-Tc-80t" firstAttribute="trailing" secondItem="1Ke-OU-xLJ" secondAttribute="trailing" id="Mcp-CC-k3H"/>
+                            <constraint firstItem="Zyu-Tc-80t" firstAttribute="leading" secondItem="1Ke-OU-xLJ" secondAttribute="leading" id="p0t-PW-TMu"/>
+                            <constraint firstItem="Zyu-Tc-80t" firstAttribute="top" secondItem="1Ke-OU-xLJ" secondAttribute="top" id="yvU-fA-ekp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Ke-OU-xLJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Top Questions" id="sTh-Of-Ami"/>
+                    <connections>
+                        <outlet property="tableView" destination="Zyu-Tc-80t" id="ZMM-24-Vlz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2NQ-Ik-Cla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2189.5999999999999" y="134.48275862068968"/>
+        </scene>
         <!--Question-->
         <scene sceneID="X3C-Lj-dsp">
             <objects>
@@ -24,7 +55,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v8N-18-jkh" userLabel="Top Stack View">
-                                <rect key="frame" x="24" y="88" width="327" height="107.5"/>
+                                <rect key="frame" x="24" y="44" width="327" height="107.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z0S-Gm-BK0" userLabel="Score Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="57.5" height="93"/>
@@ -57,14 +88,14 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwV-cT-0na">
-                                <rect key="frame" x="24" y="232" width="327" height="134"/>
+                                <rect key="frame" x="24" y="188" width="327" height="134"/>
                                 <string key="text">So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="Cloud Burst"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wmq-Sp-fBe" userLabel="Owner Stack View">
-                                <rect key="frame" x="212.5" y="402" width="138.5" height="44"/>
+                                <rect key="frame" x="212.5" y="358" width="138.5" height="44"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="rDe-Cj-Nig" customClass="Views" customModule="LifeHacksApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
@@ -104,7 +135,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTo-yi-DCs">
-                                <rect key="frame" x="212.5" y="402" width="138.5" height="44"/>
+                                <rect key="frame" x="212.5" y="358" width="138.5" height="44"/>
                                 <connections>
                                     <segue destination="8a7-Hc-WgV" kind="show" id="cME-Ly-5vv"/>
                                 </connections>
@@ -140,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzK-h6-SpU" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2190" y="135"/>
+            <point key="canvasLocation" x="3092" y="135"/>
         </scene>
         <!--Profile-->
         <scene sceneID="YEr-Bm-iTH">
@@ -155,7 +186,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LKz-Kr-ReC" customClass="Views" customModule="LifeHacksApp" customModuleProvider="target">
-                                <rect key="frame" x="115.5" y="88" width="144" height="144"/>
+                                <rect key="frame" x="115.5" y="44" width="144" height="144"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="144" id="Tac-KP-qTi"/>
                                     <constraint firstAttribute="height" constant="144" id="r5m-7a-pBh"/>
@@ -173,19 +204,19 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 reputation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k70-Gi-FLo">
-                                <rect key="frame" x="24" y="293" width="327" height="19.5"/>
+                                <rect key="frame" x="24" y="249" width="327" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <color key="textColor" name="Gray Chateau"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdl-nj-LEH">
-                                <rect key="frame" x="24" y="256" width="327" height="29"/>
+                                <rect key="frame" x="24" y="212" width="327" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <color key="textColor" name="Cloud Burst"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNG-zy-tIR">
-                                <rect key="frame" x="24" y="336.5" width="327" height="134"/>
+                                <rect key="frame" x="24" y="292.5" width="327" height="134"/>
                                 <string key="text">The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together. This improvement upon the original usage was introduced by no less a man than Stubb, in order to afford the imperilled harpooneer the strongest possible guarantee for the faithfulness and vigilance of his monkey-rope holder.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="Cloud Burst"/>
@@ -258,7 +289,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ovj-m0-lKu" kind="relationship" relationship="rootViewController" id="sMw-va-5CL"/>
+                        <segue destination="7ZX-Vq-HRE" kind="relationship" relationship="rootViewController" id="X9w-xd-Ikf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7V-3v-9Wr" userLabel="First Responder" sceneMemberID="firstResponder"/>
