@@ -69,7 +69,7 @@
                                             <outlet property="ownerLabel" destination="TPe-Or-G1Q" id="5e5-3n-sGr"/>
                                             <outlet property="scoreLabel" destination="9BD-KL-xAr" id="Je7-BU-57R"/>
                                             <outlet property="titleLabel" destination="6dY-UV-M2w" id="RQo-p0-4yB"/>
-                                            <segue destination="Ovj-m0-lKu" kind="show" id="9K0-Zr-DCB"/>
+                                            <segue destination="WEI-th-Vcc" kind="show" id="CKt-7a-RCb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -92,137 +92,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2NQ-Ik-Cla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2189.5999999999999" y="134.48275862068968"/>
-        </scene>
-        <!--Question-->
-        <scene sceneID="X3C-Lj-dsp">
-            <objects>
-                <viewController title="Question" id="Ovj-m0-lKu" customClass="QuestionViewController" customModule="LifeHacksApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="N13-b2-wwA"/>
-                        <viewControllerLayoutGuide type="bottom" id="RkX-Tr-mZn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="C5Q-pO-fg5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v8N-18-jkh" userLabel="Top Stack View">
-                                <rect key="frame" x="24" y="88" width="327" height="107.5"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z0S-Gm-BK0" userLabel="Score Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="57.5" height="93"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFO-vG-WW4">
-                                                <rect key="frame" x="17" y="0.0" width="24" height="24"/>
-                                                <color key="tintColor" name="Wedgewood"/>
-                                                <state key="normal" image="Arrow up"/>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="9876" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d24-gv-pC7">
-                                                <rect key="frame" x="0.0" y="32" width="57.5" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" name="Gray Chateau"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhq-nR-4w3">
-                                                <rect key="frame" x="17" y="69" width="24" height="24"/>
-                                                <color key="tintColor" name="Wedgewood"/>
-                                                <state key="normal" image="Arrow down"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2t9-B6-98A">
-                                        <rect key="frame" x="73.5" y="0.0" width="253.5" height="107.5"/>
-                                        <string key="text">In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. </string>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <color key="textColor" name="Cloud Burst"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwV-cT-0na">
-                                <rect key="frame" x="24" y="232" width="327" height="134"/>
-                                <string key="text">So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" name="Cloud Burst"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wmq-Sp-fBe" userLabel="Owner Stack View">
-                                <rect key="frame" x="212.5" y="402" width="138.5" height="44"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="rDe-Cj-Nig" customClass="Views" customModule="LifeHacksApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="44" id="0WA-zL-bTB"/>
-                                            <constraint firstAttribute="height" constant="44" id="YVk-JL-gZe"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="22"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="Wedgewood"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="BPL-rl-5Ov" userLabel="Asked By Stack View">
-                                        <rect key="frame" x="60" y="4.5" width="78.5" height="35"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Asked by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQu-eG-eCm">
-                                                <rect key="frame" x="0.0" y="0.0" width="55" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                                <color key="textColor" name="Gray Chateau"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrX-Yc-cRk">
-                                                <rect key="frame" x="0.0" y="14.5" width="78.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" name="Wedgewood"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTo-yi-DCs">
-                                <rect key="frame" x="212.5" y="402" width="138.5" height="44"/>
-                                <connections>
-                                    <segue destination="8a7-Hc-WgV" kind="show" id="cME-Ly-5vv"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="dwV-cT-0na" firstAttribute="top" secondItem="v8N-18-jkh" secondAttribute="bottom" constant="36.5" id="4fW-el-xLe"/>
-                            <constraint firstItem="wmq-Sp-fBe" firstAttribute="trailing" secondItem="dwV-cT-0na" secondAttribute="trailing" id="5dL-5D-1WS"/>
-                            <constraint firstItem="xTo-yi-DCs" firstAttribute="height" secondItem="wmq-Sp-fBe" secondAttribute="height" id="EcM-Dk-7QT"/>
-                            <constraint firstItem="dwV-cT-0na" firstAttribute="leading" secondItem="v8N-18-jkh" secondAttribute="leading" id="Mbj-mR-5SM"/>
-                            <constraint firstItem="dwV-cT-0na" firstAttribute="trailing" secondItem="v8N-18-jkh" secondAttribute="trailing" id="ON3-R6-Uq3"/>
-                            <constraint firstItem="v8N-18-jkh" firstAttribute="leading" secondItem="C5Q-pO-fg5" secondAttribute="leadingMargin" id="Pfg-nS-psI"/>
-                            <constraint firstItem="P7y-JH-8f6" firstAttribute="trailing" secondItem="xTo-yi-DCs" secondAttribute="trailing" constant="24" id="S4X-Jx-J5B"/>
-                            <constraint firstItem="xTo-yi-DCs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wmq-Sp-fBe" secondAttribute="leading" id="TNo-CR-UrA"/>
-                            <constraint firstItem="xTo-yi-DCs" firstAttribute="width" secondItem="wmq-Sp-fBe" secondAttribute="width" id="dm9-TF-rLG"/>
-                            <constraint firstItem="xTo-yi-DCs" firstAttribute="top" secondItem="wmq-Sp-fBe" secondAttribute="top" id="f8V-p7-feg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="v8N-18-jkh" secondAttribute="trailing" id="fsi-tH-UXc"/>
-                            <constraint firstItem="v8N-18-jkh" firstAttribute="top" secondItem="C5Q-pO-fg5" secondAttribute="topMargin" id="gLX-3r-wTE"/>
-                            <constraint firstItem="wmq-Sp-fBe" firstAttribute="top" secondItem="dwV-cT-0na" secondAttribute="bottom" constant="36" id="wed-S4-56s"/>
-                        </constraints>
-                        <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
-                        <viewLayoutGuide key="safeArea" id="P7y-JH-8f6"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Question" id="dI5-VV-usJ"/>
-                    <connections>
-                        <outlet property="bodyLabel" destination="dwV-cT-0na" id="utx-Pe-kxK"/>
-                        <outlet property="ownerImageView" destination="rDe-Cj-Nig" id="fPt-fd-uic"/>
-                        <outlet property="ownerNameLabel" destination="nrX-Yc-cRk" id="LbO-ve-ZB2"/>
-                        <outlet property="scoreLabel" destination="d24-gv-pC7" id="W1t-gL-Evg"/>
-                        <outlet property="titleLabel" destination="2t9-B6-98A" id="k2p-7g-rtd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hzK-h6-SpU" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3092" y="135"/>
         </scene>
         <!--Profile-->
         <scene sceneID="YEr-Bm-iTH">
@@ -471,6 +340,177 @@
             </objects>
             <point key="canvasLocation" x="3092" y="895.50224887556226"/>
         </scene>
+        <!--Question-->
+        <scene sceneID="iXa-m1-AEZ">
+            <objects>
+                <tableViewController id="WEI-th-Vcc" customClass="QuestionViewController" customModule="LifeHacksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uxp-B9-1UB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="i5t-gi-8Ox">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="168" id="TUa-50-x1W">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TUa-50-x1W" id="Hds-Cj-Zi4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" distribution="fillProportionally" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hg5-4G-Hjf" userLabel="Top Stack View">
+                                                    <rect key="frame" x="24" y="24" width="327" height="108"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lh6-XH-L46" userLabel="Score Stack View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="57.5" height="93"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiS-Ep-Y4z">
+                                                                    <rect key="frame" x="17" y="0.0" width="24" height="24"/>
+                                                                    <color key="tintColor" name="Wedgewood"/>
+                                                                    <state key="normal" image="Arrow up"/>
+                                                                    <connections>
+                                                                        <action selector="voteUp:" destination="WEI-th-Vcc" eventType="touchUpInside" id="R4f-1i-ibF"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="9876" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVs-Mj-KGx">
+                                                                    <rect key="frame" x="0.0" y="32" width="57.5" height="29"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                    <color key="textColor" name="Gray Chateau"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icO-8H-7au">
+                                                                    <rect key="frame" x="17" y="69" width="24" height="24"/>
+                                                                    <color key="tintColor" name="Wedgewood"/>
+                                                                    <state key="normal" image="Arrow down"/>
+                                                                    <connections>
+                                                                        <action selector="voteDown:" destination="WEI-th-Vcc" eventType="touchUpInside" id="fIS-NP-erY"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16n-BE-yvB">
+                                                            <rect key="frame" x="73.5" y="0.0" width="253.5" height="107.5"/>
+                                                            <string key="text">In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. </string>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                            <color key="textColor" name="Cloud Burst"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hg5-4G-Hjf" firstAttribute="bottom" secondItem="Hds-Cj-Zi4" secondAttribute="bottomMargin" id="6gm-q8-bHh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hg5-4G-Hjf" secondAttribute="trailing" id="qxz-Ej-p0L"/>
+                                                <constraint firstItem="hg5-4G-Hjf" firstAttribute="leading" secondItem="Hds-Cj-Zi4" secondAttribute="leadingMargin" id="rto-ip-Zsl"/>
+                                                <constraint firstItem="hg5-4G-Hjf" firstAttribute="top" secondItem="Hds-Cj-Zi4" secondAttribute="topMargin" id="vdR-9y-hPK"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="24" left="24" bottom="36" right="24"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="182" id="9eT-cz-Sc7">
+                                        <rect key="frame" x="0.0" y="168" width="375" height="182"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9eT-cz-Sc7" id="j89-3e-O74">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="182"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSI-EV-GDd">
+                                                    <rect key="frame" x="24" y="11" width="327" height="134.5"/>
+                                                    <string key="text">So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" name="Cloud Burst"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MSI-EV-GDd" firstAttribute="top" secondItem="j89-3e-O74" secondAttribute="topMargin" id="AgX-4x-K8w"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MSI-EV-GDd" secondAttribute="bottom" constant="0.5" id="LYT-2M-RbV"/>
+                                                <constraint firstItem="MSI-EV-GDd" firstAttribute="trailing" secondItem="j89-3e-O74" secondAttribute="trailingMargin" id="MAY-j0-ZDn"/>
+                                                <constraint firstItem="MSI-EV-GDd" firstAttribute="leading" secondItem="j89-3e-O74" secondAttribute="leadingMargin" id="dc8-Hj-LYw"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="0.0" left="24" bottom="36" right="24"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="k9T-Rw-yTI">
+                                        <rect key="frame" x="0.0" y="350" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k9T-Rw-yTI" id="tcM-ph-77K">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MGb-kC-83G" userLabel="Owner Stack View">
+                                                    <rect key="frame" x="212.5" y="11" width="138.5" height="44.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="R7W-5P-cy9" customClass="RoundImageView" customModule="Lifehacks" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.5" width="44" height="44"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="44" id="VBm-oX-WUT"/>
+                                                                <constraint firstAttribute="height" constant="44" id="qJM-aS-j57"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="22"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" name="Wedgewood"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="VZQ-UK-Q1h" userLabel="Asked By Stack View">
+                                                            <rect key="frame" x="60" y="5" width="78.5" height="35"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Asked by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9k-4L-zl0">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="14.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                                    <color key="textColor" name="Gray Chateau"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dd-yy-LtH">
+                                                                    <rect key="frame" x="0.0" y="14.5" width="78.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" name="Wedgewood"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MGb-kC-83G" firstAttribute="top" secondItem="tcM-ph-77K" secondAttribute="topMargin" id="0Ic-ol-0Z2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MGb-kC-83G" secondAttribute="trailing" id="Ld0-dP-1MK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MGb-kC-83G" secondAttribute="bottom" constant="0.5" id="bNL-Yf-Htg"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="0.0" left="24" bottom="24" right="24"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8a7-Hc-WgV" kind="show" id="0mi-xf-1B6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="WEI-th-Vcc" id="eob-iR-r8B"/>
+                            <outlet property="delegate" destination="WEI-th-Vcc" id="hgV-qf-52N"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Question" id="iye-aA-vml"/>
+                    <connections>
+                        <outlet property="bodyLabel" destination="MSI-EV-GDd" id="93c-7z-9uW"/>
+                        <outlet property="ownerImageView" destination="R7W-5P-cy9" id="cDs-p0-B8Q"/>
+                        <outlet property="ownerNameLabel" destination="2Dd-yy-LtH" id="ik5-Tc-ISU"/>
+                        <outlet property="scoreLabel" destination="RVs-Mj-KGx" id="T4a-mK-HBI"/>
+                        <outlet property="titleLabel" destination="16n-BE-yvB" id="1xh-s7-oi0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4VR-m7-hcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3092" y="134"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Arrow down" width="24" height="24"/>
@@ -488,6 +528,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cME-Ly-5vv"/>
+        <segue reference="0mi-xf-1B6"/>
     </inferredMetricsTieBreakers>
 </document>

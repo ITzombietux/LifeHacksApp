@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController, Stateful {
+class QuestionViewController: UITableViewController, Stateful {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -37,6 +37,11 @@ class QuestionViewController: UIViewController, Stateful {
             profileViewController.user = question?.owner
         }
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
     
     @IBAction func voteUp(_ sender: AnyObject) {
         question?.voteUp()
