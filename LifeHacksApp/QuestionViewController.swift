@@ -16,10 +16,11 @@ class QuestionViewController: UIViewController, Stateful {
     @IBOutlet weak var ownerNameLabel: UILabel!
     
     var stateController: StateController?
+    var question: Question?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let question = stateController?.question else {
+        guard let question = question else {
             return
         }
         titleLabel.text = question.title
@@ -33,21 +34,31 @@ class QuestionViewController: UIViewController, Stateful {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let profileViewController = segue.destination as? ProfileViewController {
             passState(to: profileViewController)
-            profileViewController.user = stateController?.question.owner
+            profileViewController.user = question?.owner
         }
     }
     
     @IBAction func voteUp(_ sender: AnyObject) {
-        stateController?.question.voteUp()
-        updateScore(for: stateController?.question)
+        question?.voteUp()
+        updateScore(for: question)
+        updateState(for: question)
     }
     
     @IBAction func voteDown(_ sender: AnyObject) {
-        stateController?.question.voteDown()
-        updateScore(for: stateController?.question)
+        question?.voteDown()
+        updateScore(for: question)
+        updateState(for: question)
+    }
+}
+
+private extension QuestionViewController {
+    func updateState(for question: Question?) {
+        if let question = question {
+            stateController?.updateQuestion(question)
+        }
     }
     
-    private func updateScore(for question: Question?) {
+    func updateScore(for question: Question?) {
         scoreLabel.text = "\(question?.score ?? 0)"
     }
 }

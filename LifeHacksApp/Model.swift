@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User {
+struct User: Equatable, Codable {
     let name:String
     let aboutMe:String
     let profileImage:String
@@ -27,5 +27,14 @@ struct Question {
     
     mutating func voteDown() {
         score -= 1
+    }
+}
+
+extension Question: Equatable {
+    static func == (lhs: Question, rhs: Question) -> Bool {
+        return
+            lhs.title == rhs.title &&
+                lhs.body == rhs.body &&
+                lhs.owner == rhs.owner
     }
 }

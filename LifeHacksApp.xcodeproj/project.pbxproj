@@ -15,6 +15,8 @@
 		93B18FC721E730ED006DA8DC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FC621E730ED006DA8DC /* UIColor.swift */; };
 		93B18FC921E7317D006DA8DC /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FC821E7317D006DA8DC /* UINavigationBar.swift */; };
 		93B18FCB21E78250006DA8DC /* TopQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FCA21E78250006DA8DC /* TopQuestionsViewController.swift */; };
+		93B18FCD21E7970E006DA8DC /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FCC21E7970E006DA8DC /* QuestionCell.swift */; };
+		93B18FCF21E799B9006DA8DC /* QuestionsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FCE21E799B9006DA8DC /* QuestionsDataSource.swift */; };
 		93E524B921B7A27E0066FAAC /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E524B821B7A27E0066FAAC /* StateController.swift */; };
 		93FE193821B26ADC0082326C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193721B26ADC0082326C /* AppDelegate.swift */; };
 		93FE193A21B26ADC0082326C /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193921B26ADC0082326C /* QuestionViewController.swift */; };
@@ -33,6 +35,8 @@
 		93B18FC621E730ED006DA8DC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		93B18FC821E7317D006DA8DC /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		93B18FCA21E78250006DA8DC /* TopQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopQuestionsViewController.swift; sourceTree = "<group>"; };
+		93B18FCC21E7970E006DA8DC /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		93B18FCE21E799B9006DA8DC /* QuestionsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDataSource.swift; sourceTree = "<group>"; };
 		93E524B821B7A27E0066FAAC /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010StateController.swift"; sourceTree = "<group>"; };
 		93FE193421B26ADC0082326C /* LifeHacksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeHacksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FE193721B26ADC0082326C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				93B18FC621E730ED006DA8DC /* UIColor.swift */,
 				93B18FC821E7317D006DA8DC /* UINavigationBar.swift */,
 				93B18FCA21E78250006DA8DC /* TopQuestionsViewController.swift */,
+				93B18FCC21E7970E006DA8DC /* QuestionCell.swift */,
+				93B18FCE21E799B9006DA8DC /* QuestionsDataSource.swift */,
 			);
 			path = LifeHacksApp;
 			sourceTree = "<group>";
@@ -173,9 +179,11 @@
 				93FE195021B51FD90082326C /* Model.swift in Sources */,
 				93FE193A21B26ADC0082326C /* QuestionViewController.swift in Sources */,
 				93E524B921B7A27E0066FAAC /* StateController.swift in Sources */,
+				93B18FCF21E799B9006DA8DC /* QuestionsDataSource.swift in Sources */,
 				93FE193821B26ADC0082326C /* AppDelegate.swift in Sources */,
 				934E9D8221E5E38F009FB17C /* EditProfileViewController.swift in Sources */,
 				93B18FC921E7317D006DA8DC /* UINavigationBar.swift in Sources */,
+				93B18FCD21E7970E006DA8DC /* QuestionCell.swift in Sources */,
 				93B18FC721E730ED006DA8DC /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

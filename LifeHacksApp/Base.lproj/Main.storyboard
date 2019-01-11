@@ -22,6 +22,57 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zyu-Tc-80t">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuestionCell" rowHeight="130" id="XaH-fS-OiY" customClass="QuestionCell" customModule="LifeHacksApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XaH-fS-OiY" id="deW-oo-3Po">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="129.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sv1-jF-uEa">
+                                                    <rect key="frame" x="88" y="16" width="238" height="89.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="1000" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum nisl non condimentum interdum." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dY-UV-M2w">
+                                                            <rect key="frame" x="0.0" y="0.0" width="238" height="67"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                            <color key="textColor" name="Cloud Burst"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asked by: Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPe-Or-G1Q">
+                                                            <rect key="frame" x="0.0" y="75" width="238" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                            <color key="textColor" name="Gray Chateau"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BD-KL-xAr">
+                                                    <rect key="frame" x="24" y="16" width="48" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" name="Gray Chateau"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Sv1-jF-uEa" secondAttribute="trailing" id="BFE-9P-vcp"/>
+                                                <constraint firstItem="Sv1-jF-uEa" firstAttribute="leading" secondItem="deW-oo-3Po" secondAttribute="leadingMargin" constant="64" id="K4a-5j-Mx3"/>
+                                                <constraint firstItem="9BD-KL-xAr" firstAttribute="top" secondItem="deW-oo-3Po" secondAttribute="topMargin" id="UiE-Du-b5T"/>
+                                                <constraint firstItem="Sv1-jF-uEa" firstAttribute="leading" secondItem="9BD-KL-xAr" secondAttribute="trailing" constant="16" id="Vnw-0v-wdN"/>
+                                                <constraint firstItem="9BD-KL-xAr" firstAttribute="leading" secondItem="deW-oo-3Po" secondAttribute="leadingMargin" id="aCo-Zg-gJj"/>
+                                                <constraint firstItem="Sv1-jF-uEa" firstAttribute="bottom" secondItem="deW-oo-3Po" secondAttribute="bottomMargin" id="j0F-DK-5sT"/>
+                                                <constraint firstItem="Sv1-jF-uEa" firstAttribute="top" secondItem="deW-oo-3Po" secondAttribute="topMargin" id="skb-ln-GlX"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="16" left="24" bottom="24" right="16"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ownerLabel" destination="TPe-Or-G1Q" id="5e5-3n-sGr"/>
+                                            <outlet property="scoreLabel" destination="9BD-KL-xAr" id="Je7-BU-57R"/>
+                                            <outlet property="titleLabel" destination="6dY-UV-M2w" id="RQo-p0-4yB"/>
+                                            <segue destination="Ovj-m0-lKu" kind="show" id="9K0-Zr-DCB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v8N-18-jkh" userLabel="Top Stack View">
-                                <rect key="frame" x="24" y="44" width="327" height="107.5"/>
+                                <rect key="frame" x="24" y="88" width="327" height="107.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z0S-Gm-BK0" userLabel="Score Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="57.5" height="93"/>
@@ -88,14 +139,14 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwV-cT-0na">
-                                <rect key="frame" x="24" y="188" width="327" height="134"/>
+                                <rect key="frame" x="24" y="232" width="327" height="134"/>
                                 <string key="text">So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="Cloud Burst"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wmq-Sp-fBe" userLabel="Owner Stack View">
-                                <rect key="frame" x="212.5" y="358" width="138.5" height="44"/>
+                                <rect key="frame" x="212.5" y="402" width="138.5" height="44"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="rDe-Cj-Nig" customClass="Views" customModule="LifeHacksApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
@@ -135,7 +186,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTo-yi-DCs">
-                                <rect key="frame" x="212.5" y="358" width="138.5" height="44"/>
+                                <rect key="frame" x="212.5" y="402" width="138.5" height="44"/>
                                 <connections>
                                     <segue destination="8a7-Hc-WgV" kind="show" id="cME-Ly-5vv"/>
                                 </connections>
@@ -186,7 +237,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LKz-Kr-ReC" customClass="Views" customModule="LifeHacksApp" customModuleProvider="target">
-                                <rect key="frame" x="115.5" y="44" width="144" height="144"/>
+                                <rect key="frame" x="115.5" y="88" width="144" height="144"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="144" id="Tac-KP-qTi"/>
                                     <constraint firstAttribute="height" constant="144" id="r5m-7a-pBh"/>
@@ -204,19 +255,19 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 reputation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k70-Gi-FLo">
-                                <rect key="frame" x="24" y="249" width="327" height="19.5"/>
+                                <rect key="frame" x="24" y="293" width="327" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <color key="textColor" name="Gray Chateau"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdl-nj-LEH">
-                                <rect key="frame" x="24" y="212" width="327" height="29"/>
+                                <rect key="frame" x="24" y="256" width="327" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <color key="textColor" name="Cloud Burst"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNG-zy-tIR">
-                                <rect key="frame" x="24" y="292.5" width="327" height="134"/>
+                                <rect key="frame" x="24" y="336.5" width="327" height="134"/>
                                 <string key="text">The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together. This improvement upon the original usage was introduced by no less a man than Stubb, in order to afford the imperilled harpooneer the strongest possible guarantee for the faithfulness and vigilance of his monkey-rope holder.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="Cloud Burst"/>
