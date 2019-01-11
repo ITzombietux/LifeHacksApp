@@ -15,7 +15,7 @@ struct User: Equatable, Codable {
     let reputation:Int
 }
 
-struct Question {
+struct Question: Decodable {
     let title: String
     let body: String
     private (set) var score: Int

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Stop keyboard wobble due to uneven desk</string>
+		<key>body</key>
+		<string>I&apos;ve just acquired and finished setting up a new wooden plank computer desk. Upon finishing the new setup I naturally went to use my keyboard and noticed that the wooden planks aren&apos;t exactly flush resulting in my keyboard wobbling with each keystroke as shown below.</string>
+		<key>score</key>
+		<integer>17</integer>
+		<key>owner</key>
+		<dict>
+			<key>name</key>
+			<string>Daniel Storm</string>
+			<key>aboutMe</key>
+			<string>Developing iOS applications to help you waste time, effectively.
+Latest application: Zero Views</string>
+			<key>profileImage</key>
+			<string>DanielStorm</string>
+			<key>reputation</key>
+			<integer>194</integer>
+		</dict>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>How to find a hole in a bicycle tire tube quickly</string>
+		<key>body</key>
+		<string>The tube inside by bicycle tire (inner-tube) got a hole and now I can&apos;t ride the bike. It isn&apos;t a big hole, so I am going to repair it myself. The only problem is that it takes an extremely long time to find the hole. I usually run my finger around the entire tube looking for it, until I eventually find it. This usually takesN 20-30 minutes. There must be an better alternative. What is an easy way to quickly find a hole in a tire tube?</string>
+		<key>score</key>
+		<integer>24</integer>
+		<key>owner</key>
+		<dict>
+			<key>name</key>
+			<string>michalepri</string>
+			<key>aboutMe</key>
+			<string>Moderator Pro Tempore on Lifehacks.SE</string>
+			<key>profileImage</key>
+			<string>michaelpri</string>
+			<key>reputation</key>
+			<integer>5276</integer>
+		</dict>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>How to transport single servings of powdered drink mixes</string>
+		<key>body</key>
+		<string>There are lots of drink mixes that come in powdered form: protein powders, meal replacement shake mixes, etc.
+
+Usually these come in a big container of powder with a little scoop, and you scoop out the right amount and mix it with water.
+
+How can I carry some single serving sizes of powder with me to mix with water while I&apos;m on the go? I thought about using ziploc bags but it&apos;s hard to pour from the bag into the water cup without spilling powder everywhere.</string>
+		<key>score</key>
+		<integer>10</integer>
+		<key>owner</key>
+		<dict>
+			<key>name</key>
+			<string>user939259</string>
+			<key>aboutMe</key>
+			<string></string>
+			<key>profileImage</key>
+			<string>user939259</string>
+			<key>reputation</key>
+			<integer>153</integer>
+		</dict>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>How can I relieve the itchiness from a mosquito bite?</string>
+		<key>body</key>
+		<string>I suffer quite regularly from mosquitoes bites in my home because I live in an area with many places well suited for them to breed; Stagnant bodies of water.
+
+Are there any quick and easy methods to relieve the itch from a mosquito bite using readily available house-hold items? I am aware that there are many commercial solutions for skin irritation but I&apos;m more interested in alternative treatments.</string>
+		<key>score</key>
+		<integer>12</integer>
+		<key>owner</key>
+		<dict>
+			<key>name</key>
+			<string>Lix</string>
+			<key>aboutMe</key>
+			<string>Feel free to leave me a comment! Don&apos;t forget to use comment replies! - @lix</string>
+			<key>profileImage</key>
+			<string>Lix</string>
+			<key>reputation</key>
+			<integer>251</integer>
+		</dict>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>How to get a drenched currency note dry?</string>
+		<key>body</key>
+		<string>Normally when I keep money in my back pocket of my jeans I forget to remove it before putting it for wash. How do I get, say a $50 note, to dry up quickly without using any electricity-based products ?</string>
+		<key>score</key>
+		<integer>6</integer>
+		<key>owner</key>
+		<dict>
+			<key>name</key>
+			<string>SandySands</string>
+			<key>aboutMe</key>
+			<string>In peace, prepare for war. In war, prepare for peace.</string>
+			<key>profileImage</key>
+			<string>SandySands</string>
+			<key>reputation</key>
+			<integer>207</integer>
+		</dict>
+	</dict>
+</array>
+</plist>

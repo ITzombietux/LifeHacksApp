@@ -40,6 +40,21 @@ class ProfileViewController: UIViewController, Stateful {
         }
     }
     
+    @IBAction func editWasSaved(_ segue: UIStoryboardSegue) {
+        guard let editViewController = segue.source as? EditProfileViewController else {
+            return
+        }
+        if editViewController.nameDidChange {
+            nameLabel.textColor = UIColor.orange
+        }
+        if editViewController.aboutMeDidChange {
+            aboutMeLabel.textColor = UIColor.orange
+        }
+    }
+    
+    @IBAction func editWasCanceled(_ segue: UIStoryboardSegue) {}
+
+    
     private func set(_ user: User) {
         profilePictureImageView.image = UIImage(named: user.profileImage)
         nameLabel.text = user.name

@@ -9,9 +9,14 @@
 import Foundation
 
 class StateController {
+    private let storageController = StorageController()
     private (set) var topQuestions: [Question] = StateController.createQuestions()
     
     var user = User(name: "John Doe", aboutMe: "I am the user of this app", profileImage: "Avatar", reputation: 100)
+    
+    init() {
+        self.topQuestions = storageController.fetchTopQuestions() ?? []
+    }
     
     func updateQuestion(_ question: Question) {
         var questionIndex = 0

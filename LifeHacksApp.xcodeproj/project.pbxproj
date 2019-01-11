@@ -17,6 +17,8 @@
 		93B18FCB21E78250006DA8DC /* TopQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FCA21E78250006DA8DC /* TopQuestionsViewController.swift */; };
 		93B18FCD21E7970E006DA8DC /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FCC21E7970E006DA8DC /* QuestionCell.swift */; };
 		93B18FCF21E799B9006DA8DC /* QuestionsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FCE21E799B9006DA8DC /* QuestionsDataSource.swift */; };
+		93B18FD321E86D3C006DA8DC /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93B18FD221E86D3C006DA8DC /* Data.plist */; };
+		93B18FD521E86E50006DA8DC /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FD421E86E50006DA8DC /* StorageController.swift */; };
 		93E524B921B7A27E0066FAAC /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E524B821B7A27E0066FAAC /* StateController.swift */; };
 		93FE193821B26ADC0082326C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193721B26ADC0082326C /* AppDelegate.swift */; };
 		93FE193A21B26ADC0082326C /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193921B26ADC0082326C /* QuestionViewController.swift */; };
@@ -37,6 +39,8 @@
 		93B18FCA21E78250006DA8DC /* TopQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopQuestionsViewController.swift; sourceTree = "<group>"; };
 		93B18FCC21E7970E006DA8DC /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		93B18FCE21E799B9006DA8DC /* QuestionsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDataSource.swift; sourceTree = "<group>"; };
+		93B18FD221E86D3C006DA8DC /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		93B18FD421E86E50006DA8DC /* StorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
 		93E524B821B7A27E0066FAAC /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010StateController.swift"; sourceTree = "<group>"; };
 		93FE193421B26ADC0082326C /* LifeHacksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeHacksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FE193721B26ADC0082326C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				93B18FCA21E78250006DA8DC /* TopQuestionsViewController.swift */,
 				93B18FCC21E7970E006DA8DC /* QuestionCell.swift */,
 				93B18FCE21E799B9006DA8DC /* QuestionsDataSource.swift */,
+				93B18FD221E86D3C006DA8DC /* Data.plist */,
+				93B18FD421E86E50006DA8DC /* StorageController.swift */,
 			);
 			path = LifeHacksApp;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			files = (
 				93FE194221B26ADD0082326C /* LaunchScreen.storyboard in Resources */,
 				93FE193F21B26ADD0082326C /* Assets.xcassets in Resources */,
+				93B18FD321E86D3C006DA8DC /* Data.plist in Resources */,
 				93FE193D21B26ADC0082326C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +192,7 @@
 				93B18FC921E7317D006DA8DC /* UINavigationBar.swift in Sources */,
 				93B18FCD21E7970E006DA8DC /* QuestionCell.swift in Sources */,
 				93B18FC721E730ED006DA8DC /* UIColor.swift in Sources */,
+				93B18FD521E86E50006DA8DC /* StorageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

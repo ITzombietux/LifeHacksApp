@@ -305,11 +305,13 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KE1-9m-LB0">
                             <connections>
                                 <action selector="cancel:" destination="tyh-lJ-Eba" id="j9h-Xh-pAz"/>
+                                <segue destination="hHA-be-NnI" kind="unwind" identifier="Cancel" unwindAction="editWasCanceled:" id="7HP-IB-VZu"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="gKA-9M-d8o">
                             <connections>
                                 <action selector="save:" destination="tyh-lJ-Eba" id="Y4h-8b-2FA"/>
+                                <segue destination="hHA-be-NnI" kind="unwind" identifier="Save" unwindAction="editWasSaved:" id="PJ3-sD-xe8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -319,6 +321,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxL-f5-7EL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hHA-be-NnI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4031.1999999999998" y="895.50224887556226"/>
         </scene>
