@@ -9,7 +9,9 @@
 import UIKit
 
 class MainTabBarController: UITabBarController, Stateful {
+   
     var stateController: StateController? = StateController()
+    var settingsController: SettingsController?
     
     override func viewDidLoad() {
         guard let viewControllers = viewControllers else {

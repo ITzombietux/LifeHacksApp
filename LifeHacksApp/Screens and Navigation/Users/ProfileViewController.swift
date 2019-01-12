@@ -9,6 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController, Stateful {
+    
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var reputationLabel: UILabel!
@@ -16,6 +17,7 @@ class ProfileViewController: UIViewController, Stateful {
     
     var user: User?
     var stateController: StateController?
+     var settingsController: SettingsController?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,6 +41,21 @@ class ProfileViewController: UIViewController, Stateful {
             destination.delegate = self
         }
     }
+    
+    @IBAction func editWasSaved(_ segue: UIStoryboardSegue) {
+        guard let editViewController = segue.source as? EditProfileViewController else {
+            return
+        }
+        if editViewController.nameDidChange {
+            nameLabel.textColor = UIColor.orange
+        }
+        if editViewController.aboutMeDidChange {
+            aboutMeLabel.textColor = UIColor.orange
+        }
+    }
+    
+    @IBAction func editWasCanceled(_ segue: UIStoryboardSegue) {}
+
     
     private func set(_ user: User) {
         profilePictureImageView.image = UIImage(named: user.profileImage)
