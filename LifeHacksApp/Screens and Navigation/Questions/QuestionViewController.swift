@@ -9,14 +9,17 @@
 import UIKit
 
 class QuestionViewController: UITableViewController, Stateful {
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var ownerImageView: UIImageView!
     @IBOutlet weak var ownerNameLabel: UILabel!
+    @IBOutlet var buttons: [UIButton]!
     
     var stateController: StateController?
     var question: Question?
+    var settingsController: SettingsController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +45,15 @@ class QuestionViewController: UITableViewController, Stateful {
         return UITableView.automaticDimension
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let scheme = settingsController?.scheme else {
+            return
+        }
+        titleLabel.textColor = scheme.titleColor
+        for button in buttons {
+            button.tintColor = scheme.buttonColor
+        }
+    }
     
     @IBAction func voteUp(_ sender: AnyObject) {
         question?.voteUp()

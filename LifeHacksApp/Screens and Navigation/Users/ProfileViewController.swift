@@ -9,6 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController, Stateful {
+    
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var reputationLabel: UILabel!
@@ -16,6 +17,7 @@ class ProfileViewController: UIViewController, Stateful {
     
     var user: User?
     var stateController: StateController?
+     var settingsController: SettingsController?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

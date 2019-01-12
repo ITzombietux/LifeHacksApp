@@ -13,12 +13,14 @@ protocol EditProfileViewControllerDelegate: class {
 }
 
 class EditProfileViewController: UIViewController, Stateful {
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var aboutMeTextView: UITextView!
     
     var nameDidChange = false
     var aboutMeDidChange = false
     var stateController: StateController?
+    var settingsController: SettingsController?
     weak var delegate: EditProfileViewControllerDelegate?
     
     override func viewDidLoad() {

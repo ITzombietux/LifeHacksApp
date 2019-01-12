@@ -8,11 +8,12 @@
 
 import UIKit
 
-class TopQuestionsViewController: UIViewController, Stateful {
+class TopQuestionsViewController: UIViewController, UITableViewDelegate, Stateful {
     
     @IBOutlet weak var tableView: UITableView!
     var questionsDataSource: QuestionsDataSource?
     var stateController: StateController?
+    var settingsController: SettingsController?
 
     override func viewWillAppear(_ animated: Bool) {
         guard let topQuestions = stateController?.topQuestions else {
@@ -30,6 +31,13 @@ class TopQuestionsViewController: UIViewController, Stateful {
         passState(to: questionViewController)
         if let indexPath = tableView.indexPathForSelectedRow {
             questionViewController.question = questionsDataSource?.question(at: indexPath)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let cell = cell as? QuestionCell,
+            let scheme = settingsController?.scheme {
+            cell.titleColor = scheme.titleColor
         }
     }
 }

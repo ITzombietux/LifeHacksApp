@@ -30,4 +30,10 @@ class QuestionCell: UITableViewCell {
             ownerLabel.text = "Asked by: " + (username ?? "")
         }
     }
+    
+    var titleColor: UIColor? {
+        didSet {
+            titleLabel.textColor = titleColor
+        }
+    }
 }

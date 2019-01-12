@@ -19,6 +19,9 @@
 		93B18FCF21E799B9006DA8DC /* QuestionsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FCE21E799B9006DA8DC /* QuestionsDataSource.swift */; };
 		93B18FD321E86D3C006DA8DC /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93B18FD221E86D3C006DA8DC /* Data.plist */; };
 		93B18FD521E86E50006DA8DC /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FD421E86E50006DA8DC /* StorageController.swift */; };
+		93B18FD721E98CB8006DA8DC /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FD621E98CB8006DA8DC /* Style.swift */; };
+		93B18FD921E9C1E1006DA8DC /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FD821E9C1E1006DA8DC /* SettingsController.swift */; };
+		93B18FDB21E9C4D1006DA8DC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FDA21E9C4D1006DA8DC /* SettingsViewController.swift */; };
 		93E524B921B7A27E0066FAAC /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E524B821B7A27E0066FAAC /* StateController.swift */; };
 		93FE193821B26ADC0082326C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193721B26ADC0082326C /* AppDelegate.swift */; };
 		93FE193A21B26ADC0082326C /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193921B26ADC0082326C /* QuestionViewController.swift */; };
@@ -41,6 +44,9 @@
 		93B18FCE21E799B9006DA8DC /* QuestionsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDataSource.swift; sourceTree = "<group>"; };
 		93B18FD221E86D3C006DA8DC /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		93B18FD421E86E50006DA8DC /* StorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
+		93B18FD621E98CB8006DA8DC /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		93B18FD821E9C1E1006DA8DC /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		93B18FDA21E9C4D1006DA8DC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		93E524B821B7A27E0066FAAC /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010StateController.swift"; sourceTree = "<group>"; };
 		93FE193421B26ADC0082326C /* LifeHacksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeHacksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FE193721B26ADC0082326C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93B18FDC21E9C8F3006DA8DC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				934E9D7D21E58E79009FB17C /* Views.swift */,
+				93B18FC621E730ED006DA8DC /* UIColor.swift */,
+				93B18FC821E7317D006DA8DC /* UINavigationBar.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		93B18FDE21E9C92C006DA8DC /* Screens and Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				93FE193B21B26ADC0082326C /* Main.storyboard */,
+				93B18FC221E643BC006DA8DC /* Stateful.swift */,
+				93B18FC421E647BD006DA8DC /* MainTabBarController.swift */,
+				93B18FDA21E9C4D1006DA8DC /* SettingsViewController.swift */,
+				93B18FDF21E9C960006DA8DC /* Questions */,
+				93B18FE021E9C98B006DA8DC /* Users */,
+			);
+			path = "Screens and Navigation";
+			sourceTree = "<group>";
+		};
+		93B18FDF21E9C960006DA8DC /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				93FE193921B26ADC0082326C /* QuestionViewController.swift */,
+				93B18FCA21E78250006DA8DC /* TopQuestionsViewController.swift */,
+				93B18FCE21E799B9006DA8DC /* QuestionsDataSource.swift */,
+				93B18FCC21E7970E006DA8DC /* QuestionCell.swift */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		93B18FE021E9C98B006DA8DC /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				934E9D7F21E5C979009FB17C /* ProfileViewController.swift */,
+				934E9D8121E5E38F009FB17C /* EditProfileViewController.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		93B18FE121E9C9BD006DA8DC /* Model and state */ = {
+			isa = PBXGroup;
+			children = (
+				93B18FD421E86E50006DA8DC /* StorageController.swift */,
+				93B18FD821E9C1E1006DA8DC /* SettingsController.swift */,
+				93E524B821B7A27E0066FAAC /* StateController.swift */,
+				93B18FD621E98CB8006DA8DC /* Style.swift */,
+				93FE194F21B51FD90082326C /* Model.swift */,
+				93B18FD221E86D3C006DA8DC /* Data.plist */,
+			);
+			path = "Model and state";
+			sourceTree = "<group>";
+		};
 		93FE192B21B26ADC0082326C = {
 			isa = PBXGroup;
 			children = (
@@ -83,25 +145,12 @@
 			isa = PBXGroup;
 			children = (
 				93FE193721B26ADC0082326C /* AppDelegate.swift */,
-				93FE193B21B26ADC0082326C /* Main.storyboard */,
-				93FE193E21B26ADD0082326C /* Assets.xcassets */,
 				93FE194021B26ADD0082326C /* LaunchScreen.storyboard */,
 				93FE194321B26ADD0082326C /* Info.plist */,
-				93FE193921B26ADC0082326C /* QuestionViewController.swift */,
-				93FE194F21B51FD90082326C /* Model.swift */,
-				93E524B821B7A27E0066FAAC /* StateController.swift */,
-				934E9D7D21E58E79009FB17C /* Views.swift */,
-				934E9D7F21E5C979009FB17C /* ProfileViewController.swift */,
-				934E9D8121E5E38F009FB17C /* EditProfileViewController.swift */,
-				93B18FC221E643BC006DA8DC /* Stateful.swift */,
-				93B18FC421E647BD006DA8DC /* MainTabBarController.swift */,
-				93B18FC621E730ED006DA8DC /* UIColor.swift */,
-				93B18FC821E7317D006DA8DC /* UINavigationBar.swift */,
-				93B18FCA21E78250006DA8DC /* TopQuestionsViewController.swift */,
-				93B18FCC21E7970E006DA8DC /* QuestionCell.swift */,
-				93B18FCE21E799B9006DA8DC /* QuestionsDataSource.swift */,
-				93B18FD221E86D3C006DA8DC /* Data.plist */,
-				93B18FD421E86E50006DA8DC /* StorageController.swift */,
+				93FE193E21B26ADD0082326C /* Assets.xcassets */,
+				93B18FDC21E9C8F3006DA8DC /* UI */,
+				93B18FDE21E9C92C006DA8DC /* Screens and Navigation */,
+				93B18FE121E9C9BD006DA8DC /* Model and state */,
 			);
 			path = LifeHacksApp;
 			sourceTree = "<group>";
@@ -181,10 +230,12 @@
 				93B18FCB21E78250006DA8DC /* TopQuestionsViewController.swift in Sources */,
 				934E9D8021E5C979009FB17C /* ProfileViewController.swift in Sources */,
 				93B18FC321E643BC006DA8DC /* Stateful.swift in Sources */,
+				93B18FD921E9C1E1006DA8DC /* SettingsController.swift in Sources */,
 				93B18FC521E647BD006DA8DC /* MainTabBarController.swift in Sources */,
 				934E9D7E21E58E79009FB17C /* Views.swift in Sources */,
 				93FE195021B51FD90082326C /* Model.swift in Sources */,
 				93FE193A21B26ADC0082326C /* QuestionViewController.swift in Sources */,
+				93B18FD721E98CB8006DA8DC /* Style.swift in Sources */,
 				93E524B921B7A27E0066FAAC /* StateController.swift in Sources */,
 				93B18FCF21E799B9006DA8DC /* QuestionsDataSource.swift in Sources */,
 				93FE193821B26ADC0082326C /* AppDelegate.swift in Sources */,
@@ -193,6 +244,7 @@
 				93B18FCD21E7970E006DA8DC /* QuestionCell.swift in Sources */,
 				93B18FC721E730ED006DA8DC /* UIColor.swift in Sources */,
 				93B18FD521E86E50006DA8DC /* StorageController.swift in Sources */,
+				93B18FDB21E9C4D1006DA8DC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
