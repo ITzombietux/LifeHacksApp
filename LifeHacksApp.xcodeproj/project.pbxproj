@@ -22,6 +22,8 @@
 		93B18FD721E98CB8006DA8DC /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FD621E98CB8006DA8DC /* Style.swift */; };
 		93B18FD921E9C1E1006DA8DC /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FD821E9C1E1006DA8DC /* SettingsController.swift */; };
 		93B18FDB21E9C4D1006DA8DC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FDA21E9C4D1006DA8DC /* SettingsViewController.swift */; };
+		93B18FE421EC6170006DA8DC /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FE321EC6170006DA8DC /* URL.swift */; };
+		93B18FE621EC6245006DA8DC /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FE521EC6245006DA8DC /* ApiController.swift */; };
 		93E524B921B7A27E0066FAAC /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E524B821B7A27E0066FAAC /* StateController.swift */; };
 		93FE193821B26ADC0082326C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193721B26ADC0082326C /* AppDelegate.swift */; };
 		93FE193A21B26ADC0082326C /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE193921B26ADC0082326C /* QuestionViewController.swift */; };
@@ -47,6 +49,8 @@
 		93B18FD621E98CB8006DA8DC /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		93B18FD821E9C1E1006DA8DC /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		93B18FDA21E9C4D1006DA8DC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		93B18FE321EC6170006DA8DC /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		93B18FE521EC6245006DA8DC /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		93E524B821B7A27E0066FAAC /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010StateController.swift"; sourceTree = "<group>"; };
 		93FE193421B26ADC0082326C /* LifeHacksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeHacksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FE193721B26ADC0082326C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 			path = "Model and state";
 			sourceTree = "<group>";
 		};
+		93B18FE221EC6158006DA8DC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				93B18FE321EC6170006DA8DC /* URL.swift */,
+				93B18FE521EC6245006DA8DC /* ApiController.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		93FE192B21B26ADC0082326C = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +164,7 @@
 				93B18FDC21E9C8F3006DA8DC /* UI */,
 				93B18FDE21E9C92C006DA8DC /* Screens and Navigation */,
 				93B18FE121E9C9BD006DA8DC /* Model and state */,
+				93B18FE221EC6158006DA8DC /* Networking */,
 			);
 			path = LifeHacksApp;
 			sourceTree = "<group>";
@@ -233,11 +247,13 @@
 				93B18FD921E9C1E1006DA8DC /* SettingsController.swift in Sources */,
 				93B18FC521E647BD006DA8DC /* MainTabBarController.swift in Sources */,
 				934E9D7E21E58E79009FB17C /* Views.swift in Sources */,
+				93B18FE421EC6170006DA8DC /* URL.swift in Sources */,
 				93FE195021B51FD90082326C /* Model.swift in Sources */,
 				93FE193A21B26ADC0082326C /* QuestionViewController.swift in Sources */,
 				93B18FD721E98CB8006DA8DC /* Style.swift in Sources */,
 				93E524B921B7A27E0066FAAC /* StateController.swift in Sources */,
 				93B18FCF21E799B9006DA8DC /* QuestionsDataSource.swift in Sources */,
+				93B18FE621EC6245006DA8DC /* ApiController.swift in Sources */,
 				93FE193821B26ADC0082326C /* AppDelegate.swift in Sources */,
 				934E9D8221E5E38F009FB17C /* EditProfileViewController.swift in Sources */,
 				93B18FC921E7317D006DA8DC /* UINavigationBar.swift in Sources */,
