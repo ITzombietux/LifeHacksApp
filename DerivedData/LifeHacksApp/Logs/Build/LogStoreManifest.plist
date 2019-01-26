@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>9</integer>
+	<key>logs</key>
+	<dict>
+		<key>1942B720-D1BD-4766-9E49-61470B3D5077</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1942B720-D1BD-4766-9E49-61470B3D5077.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>LifeHacksApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>LifeHacksApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build LifeHacksApp</string>
+			<key>timeStartedRecording</key>
+			<real>570197447.32126796</real>
+			<key>timeStoppedRecording</key>
+			<real>570197448.75198102</real>
+			<key>title</key>
+			<string>Build LifeHacksApp</string>
+			<key>uniqueIdentifier</key>
+			<string>1942B720-D1BD-4766-9E49-61470B3D5077</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
