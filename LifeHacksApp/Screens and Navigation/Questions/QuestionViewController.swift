@@ -21,17 +21,20 @@ class QuestionViewController: UITableViewController, Stateful {
     var question: Question?
     var settingsController: SettingsController?
     
+    private var questionRequest: ApiRequest<QuestionsResource>?
+    private var avatarRequest: ImageRequest?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let question = question else {
             return
         }
-        titleLabel.text = question.title
+        titleLabel.text = question.title.htmlString?.string
         bodyLabel.text = question.body
         updateScore(for: question)
         let owner = question.owner
-        ownerImageView.image = UIImage(named: owner.profileImage)
-        ownerNameLabel.text = owner.name
+        ownerNameLabel.text = owner?.name
+        fetchRemoteData(for: question)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -77,6 +80,29 @@ private extension QuestionViewController {
     
     func updateScore(for question: Question?) {
         scoreLabel.text = "\(question?.score ?? 0)"
+    }
+    
+    func fetchRemoteData(for question: Question) {
+        let resource = QuestionsResource(id: question.id)
+        let request = ApiRequest(resource: resource)
+        self.questionRequest = request
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        request.execute { [weak self] result in
+            guard let question = result?.first else {
+                return
+            }
+            self?.bodyLabel.attributedText = question.body?.htmlString
+            self?.tableView.reloadData()
+            guard let imageUrl = question.owner?.profileImageURL else {
+                return
+            }
+            let imageRequest = ImageRequest(url: imageUrl)
+            self?.avatarRequest = imageRequest
+            imageRequest.execute { image in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                self?.ownerImageView.image = image
+            }
+        }
     }
 }
 

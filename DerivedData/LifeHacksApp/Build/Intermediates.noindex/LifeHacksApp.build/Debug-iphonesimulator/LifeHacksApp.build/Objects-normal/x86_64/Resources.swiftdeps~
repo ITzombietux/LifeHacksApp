@@ -1,11 +1,195 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "ApiResource"
+- "UsersResource"
+- "QuestionsResource"
 provides-nominal:
+- "12LifeHacksApp11ApiResourceP"
+- "12LifeHacksApp13UsersResourceV"
+- "12LifeHacksApp17QuestionsResourceV"
 provides-member:
+- ["12LifeHacksApp11ApiResourceP", ""]
+- ["12LifeHacksApp13UsersResourceV", ""]
+- ["12LifeHacksApp17QuestionsResourceV", ""]
+- ["12LifeHacksApp11ApiResourceP", "url"]
 provides-dynamic-lookup:
 depends-top-level:
+- "ApiResource"
+- "AssignmentPrecedence"
+- "Decodable"
+- !private "Dictionary"
+- "Int"
+- "Question"
+- "QuestionsResource"
+- "String"
+- "StringLiteralType"
+- "URL"
+- "User"
+- "UsersResource"
 depends-member:
+- ["12LifeHacksApp11ApiResourceP", "Decodable"]
+- ["12LifeHacksApp11ApiResourceP", "Int"]
+- ["12LifeHacksApp11ApiResourceP", "ModelType"]
+- ["12LifeHacksApp11ApiResourceP", "String"]
+- ["12LifeHacksApp11ApiResourceP", "URL"]
+- ["12LifeHacksApp11ApiResourceP", ""]
+- ["12LifeHacksApp11ApiResourceP", "filter"]
+- ["12LifeHacksApp11ApiResourceP", "id"]
+- ["12LifeHacksApp11ApiResourceP", "path"]
+- ["12LifeHacksApp11ApiResourceP", "url"]
+- ["SK", "init"]
+- ["SK", "init"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- ["SL", "init"]
+- ["SL", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "appendPathComponent"]
+- !private ["s28CustomDebugStringConvertibleP", "appendingParameters"]
+- !private ["s28CustomDebugStringConvertibleP", "appendingPathComponent"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "appendPathComponent"]
+- !private ["s29CustomPlaygroundQuickLookableP", "appendingParameters"]
+- !private ["s29CustomPlaygroundQuickLookableP", "appendingPathComponent"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "appendPathComponent"]
+- !private ["s23CustomStringConvertibleP", "appendingParameters"]
+- !private ["s23CustomStringConvertibleP", "appendingPathComponent"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["Se", "appendPathComponent"]
+- !private ["Se", "appendingParameters"]
+- !private ["Se", "appendingPathComponent"]
+- ["Se", "init"]
+- ["Se", "init"]
+- !private ["SE", "appendPathComponent"]
+- !private ["SE", "appendingParameters"]
+- !private ["SE", "appendingPathComponent"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SQ", "appendPathComponent"]
+- !private ["SQ", "appendingParameters"]
+- !private ["SQ", "appendingPathComponent"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "appendPathComponent"]
+- !private ["SH", "appendingParameters"]
+- !private ["SH", "appendingPathComponent"]
+- ["SH", "init"]
+- ["SH", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["12LifeHacksApp8QuestionV", "deinit"]
+- ["12LifeHacksApp17QuestionsResourceV", "Int"]
+- ["12LifeHacksApp17QuestionsResourceV", "ModelType"]
+- ["12LifeHacksApp17QuestionsResourceV", "Question"]
+- ["12LifeHacksApp17QuestionsResourceV", "deinit"]
+- ["12LifeHacksApp17QuestionsResourceV", "filter"]
+- ["12LifeHacksApp17QuestionsResourceV", "id"]
+- ["12LifeHacksApp17QuestionsResourceV", "init"]
+- ["12LifeHacksApp17QuestionsResourceV", "path"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "appendPathComponent"]
+- !private ["10Foundation20ReferenceConvertibleP", "appendingParameters"]
+- !private ["10Foundation20ReferenceConvertibleP", "appendingPathComponent"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- ["ST", "init"]
+- ["ST", "init"]
+- ["SS", "init"]
+- ["SS", "init"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["10Foundation3URLV", "appendPathComponent"]
+- !private ["10Foundation3URLV", "appendingParameters"]
+- !private ["10Foundation3URLV", "appendingPathComponent"]
+- !private ["10Foundation3URLV", "init"]
+- ["12LifeHacksApp4UserV", "deinit"]
+- ["12LifeHacksApp13UsersResourceV", "Int"]
+- ["12LifeHacksApp13UsersResourceV", "ModelType"]
+- ["12LifeHacksApp13UsersResourceV", "User"]
+- ["12LifeHacksApp13UsersResourceV", "deinit"]
+- ["12LifeHacksApp13UsersResourceV", "filter"]
+- ["12LifeHacksApp13UsersResourceV", "id"]
+- ["12LifeHacksApp13UsersResourceV", "init"]
+- ["12LifeHacksApp13UsersResourceV", "path"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "appendPathComponent"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "appendingParameters"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "appendingPathComponent"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "appendPathComponent"]
+- !private ["s21_ObjectiveCBridgeableP", "appendingParameters"]
+- !private ["s21_ObjectiveCBridgeableP", "appendingPathComponent"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- "12LifeHacksApp11ApiResourceP"
+- "SK"
+- "s7CVarArgP"
+- "Sl"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
+- "SQ"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "12LifeHacksApp8QuestionV"
+- "12LifeHacksApp17QuestionsResourceV"
+- "Sm"
+- !private "10Foundation20ReferenceConvertibleP"
+- "ST"
+- "SS"
+- "Sy"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "10Foundation3URLV"
+- "12LifeHacksApp4UserV"
+- "12LifeHacksApp13UsersResourceV"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
@@ -32,4 +216,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "5bf39d8b5f0094ca83c744a0da4fb204"
+interface-hash: "b75a40ae8ee4fabd543f1b186344f597"

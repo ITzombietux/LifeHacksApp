@@ -118,10 +118,11 @@ depends-member:
 - !private ["Se", "_getBuiltinLogicValue"]
 - !private ["Se", "aboutMe"]
 - !private ["Se", "count"]
+- !private ["Se", "id"]
 - !private ["Se", "init"]
 - !private ["Se", "init"]
 - !private ["Se", "name"]
-- !private ["Se", "profileImage"]
+- !private ["Se", "profileImageURL"]
 - !private ["Se", "reputation"]
 - !private ["Se", "text"]
 - ["12LifeHacksApp25EditProfileViewControllerC", "Bool"]
@@ -153,10 +154,11 @@ depends-member:
 - !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "aboutMe"]
 - !private ["SE", "count"]
+- !private ["SE", "id"]
 - !private ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "name"]
-- !private ["SE", "profileImage"]
+- !private ["SE", "profileImageURL"]
 - !private ["SE", "reputation"]
 - !private ["SE", "text"]
 - !private ["SQ", "UIAlertAction"]
@@ -171,6 +173,7 @@ depends-member:
 - !private ["SQ", "alert"]
 - !private ["SQ", "count"]
 - !private ["SQ", "default"]
+- !private ["SQ", "id"]
 - !private ["SQ", "identifier"]
 - !private ["SQ", "init"]
 - !private ["SQ", "init"]
@@ -178,7 +181,7 @@ depends-member:
 - !private ["SQ", "nameDidChange"]
 - !private ["SQ", "nameTextField"]
 - !private ["SQ", "present"]
-- !private ["SQ", "profileImage"]
+- !private ["SQ", "profileImageURL"]
 - !private ["SQ", "reputation"]
 - ["SQ", "settingsController"]
 - ["SQ", "stateController"]
@@ -548,9 +551,10 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["12LifeHacksApp4UserV", "aboutMe"]
 - !private ["12LifeHacksApp4UserV", "deinit"]
-- ["12LifeHacksApp4UserV", "init"]
+- !private ["12LifeHacksApp4UserV", "id"]
+- !private ["12LifeHacksApp4UserV", "init"]
 - !private ["12LifeHacksApp4UserV", "name"]
-- !private ["12LifeHacksApp4UserV", "profileImage"]
+- !private ["12LifeHacksApp4UserV", "profileImageURL"]
 - !private ["12LifeHacksApp4UserV", "reputation"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
@@ -675,7 +679,7 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
-- "12LifeHacksApp4UserV"
+- !private "12LifeHacksApp4UserV"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"

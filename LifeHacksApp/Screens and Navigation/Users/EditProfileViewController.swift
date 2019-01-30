@@ -38,7 +38,7 @@ class EditProfileViewController: UIViewController, Stateful {
             return
         }
         let oldUser = stateController.user
-        stateController.user = User(name: name, aboutMe: aboutMe, profileImage: oldUser.profileImage, reputation: oldUser.reputation)
+        stateController.user = User(id: oldUser.id, name: name, aboutMe: aboutMe, profileImageURL: oldUser.profileImageURL, reputation: oldUser.reputation)
         nameDidChange = name != oldUser.name
         aboutMeDidChange = aboutMe != oldUser.aboutMe
     }

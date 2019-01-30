@@ -7,9 +7,9 @@ provides-member:
 - ["12LifeHacksApp17StorageControllerC", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "??"
-- !private "Bundle"
 - !private "Data"
+- "Decodable"
+- "Encodable"
 - "FileManager"
 - !private "FloatLiteralType"
 - !private "IntegerLiteralType"
@@ -17,6 +17,7 @@ depends-top-level:
 - !private "PropertyListEncoder"
 - "Question"
 - "StorageController"
+- !private "String"
 - !private "StringLiteralType"
 - "URL"
 - "User"
@@ -27,14 +28,10 @@ depends-member:
 - !private ["SK", "init"]
 - !private ["SK", "init"]
 - !private ["SK", "write"]
-- !private ["So8NSBundleC", "main"]
-- !private ["So8NSBundleC", "url"]
 - ["s7CVarArgP", "default"]
 - ["s7CVarArgP", "first"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "main"]
-- !private ["s7CVarArgP", "url"]
 - ["s7CVarArgP", "urls"]
 - ["Sl", "first"]
 - !private ["Sl", "init"]
@@ -48,8 +45,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "first"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "main"]
-- !private ["s28CustomDebugStringConvertibleP", "url"]
 - ["s28CustomDebugStringConvertibleP", "urls"]
 - !private ["s28CustomDebugStringConvertibleP", "write"]
 - !private ["s29CustomPlaygroundQuickLookableP", "appendingPathComponent"]
@@ -66,8 +61,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "first"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "main"]
-- !private ["s23CustomStringConvertibleP", "url"]
 - ["s23CustomStringConvertibleP", "urls"]
 - !private ["s23CustomStringConvertibleP", "write"]
 - !private ["10Foundation4DataV", "init"]
@@ -86,13 +79,11 @@ depends-member:
 - !private ["SE", "write"]
 - !private ["SQ", "appendingPathComponent"]
 - !private ["SQ", "appendingPathExtension"]
+- ["SQ", "cachesDirectory"]
 - ["SQ", "default"]
-- ["SQ", "documentDirectory"]
 - ["SQ", "first"]
 - !private ["SQ", "init"]
 - !private ["SQ", "init"]
-- !private ["SQ", "main"]
-- !private ["SQ", "url"]
 - ["SQ", "urls"]
 - ["SQ", "userDomainMask"]
 - !private ["SQ", "write"]
@@ -108,13 +99,11 @@ depends-member:
 - ["So13NSFileManagerC", "urls"]
 - !private ["SH", "appendingPathComponent"]
 - !private ["SH", "appendingPathExtension"]
+- ["SH", "cachesDirectory"]
 - ["SH", "default"]
-- ["SH", "documentDirectory"]
 - ["SH", "first"]
 - !private ["SH", "init"]
 - !private ["SH", "init"]
-- !private ["SH", "main"]
-- !private ["SH", "url"]
 - ["SH", "urls"]
 - !private ["SH", "write"]
 - !private ["s25LosslessStringConvertibleP", "init"]
@@ -125,12 +114,8 @@ depends-member:
 - !private ["SM", "init"]
 - !private ["SM", "write"]
 - ["So8NSObjectC", "default"]
-- !private ["So8NSObjectC", "main"]
-- !private ["So8NSObjectC", "url"]
 - ["So8NSObjectC", "urls"]
 - ["So8NSObjectP", "default"]
-- !private ["So8NSObjectP", "main"]
-- !private ["So8NSObjectP", "url"]
 - ["So8NSObjectP", "urls"]
 - ["s9OptionSetP", "userDomainMask"]
 - !private ["10Foundation19PropertyListDecoderC", "decode"]
@@ -145,33 +130,36 @@ depends-member:
 - !private ["Sm", "init"]
 - !private ["Sm", "init"]
 - !private ["Sm", "write"]
-- ["SY", "documentDirectory"]
+- ["SY", "cachesDirectory"]
 - ["SY", "userDomainMask"]
 - !private ["10Foundation20ReferenceConvertibleP", "appendingPathComponent"]
 - !private ["10Foundation20ReferenceConvertibleP", "appendingPathExtension"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "write"]
-- ["So21NSSearchPathDirectoryV", "documentDirectory"]
+- ["So21NSSearchPathDirectoryV", "cachesDirectory"]
 - ["So22NSSearchPathDomainMaskV", "userDomainMask"]
 - ["ST", "first"]
 - !private ["ST", "init"]
 - !private ["ST", "init"]
 - !private ["ST", "write"]
 - ["s10SetAlgebraP", "userDomainMask"]
-- !private ["12LifeHacksApp17StorageControllerC", "Bundle"]
 - !private ["12LifeHacksApp17StorageControllerC", "Data"]
+- ["12LifeHacksApp17StorageControllerC", "Decodable"]
+- ["12LifeHacksApp17StorageControllerC", "Encodable"]
 - ["12LifeHacksApp17StorageControllerC", "FileManager"]
 - !private ["12LifeHacksApp17StorageControllerC", "PropertyListDecoder"]
 - !private ["12LifeHacksApp17StorageControllerC", "PropertyListEncoder"]
 - ["12LifeHacksApp17StorageControllerC", "Question"]
+- !private ["12LifeHacksApp17StorageControllerC", "String"]
 - ["12LifeHacksApp17StorageControllerC", "URL"]
 - ["12LifeHacksApp17StorageControllerC", "User"]
-- !private ["12LifeHacksApp17StorageControllerC", "documentsDirectoryURL"]
+- !private ["12LifeHacksApp17StorageControllerC", "cachesDirectoryURL"]
+- !private ["12LifeHacksApp17StorageControllerC", "fetch"]
 - ["12LifeHacksApp17StorageControllerC", "fetchTopQuestions"]
 - ["12LifeHacksApp17StorageControllerC", "fetchUser"]
+- !private ["12LifeHacksApp17StorageControllerC", "fileUrl"]
 - ["12LifeHacksApp17StorageControllerC", "init"]
 - ["12LifeHacksApp17StorageControllerC", "save"]
-- !private ["12LifeHacksApp17StorageControllerC", "userFileURL"]
 - !private ["SS", "init"]
 - !private ["SS", "init"]
 - !private ["Sy", "init"]
@@ -182,8 +170,9 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["10Foundation3URLV", "appendingPathComponent"]
 - !private ["10Foundation3URLV", "appendingPathExtension"]
+- !private ["10Foundation3URLV", "init"]
 - !private ["12LifeHacksApp4UserV", "deinit"]
-- ["12LifeHacksApp4UserV", "init"]
+- !private ["12LifeHacksApp4UserV", "init"]
 - ["s24_DestructorSafeContainerP", "first"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
@@ -195,12 +184,11 @@ depends-member:
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "appendingPathComponent"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "appendingPathExtension"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s35_HasCustomAnyHashableRepresentationP", "first"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "default"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "url"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "urls"]
 - !private ["s21_ObjectiveCBridgeableP", "appendingPathComponent"]
 - !private ["s21_ObjectiveCBridgeableP", "appendingPathExtension"]
@@ -214,7 +202,6 @@ depends-nominal:
 - "Sa"
 - "s13ArrayProtocolP"
 - "SK"
-- !private "So8NSBundleC"
 - "s7CVarArgP"
 - "Sl"
 - !private "SL"
@@ -255,7 +242,7 @@ depends-nominal:
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "10Foundation3URLV"
-- "12LifeHacksApp4UserV"
+- !private "12LifeHacksApp4UserV"
 - "s24_DestructorSafeContainerP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
@@ -293,4 +280,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "58e64a9093bf1d71e51313a374f22e7c"
+interface-hash: "5b98453186fd41ff8baa8c3defa26671"

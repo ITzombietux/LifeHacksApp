@@ -170,13 +170,17 @@ depends-member:
 - !private ["SE", "_findStringSwitchCase"]
 - !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "aboutMe"]
+- !private ["SE", "body"]
 - ["SE", "encode"]
 - !private ["SE", "id"]
 - ["SE", "init"]
 - ["SE", "init"]
 - !private ["SE", "name"]
+- !private ["SE", "owner"]
 - !private ["SE", "profileImageURL"]
 - !private ["SE", "reputation"]
+- !private ["SE", "score"]
+- !private ["SE", "title"]
 - !private ["s7EncoderP", "container"]
 - ["SQ", "RawValue"]
 - ["SQ", ""]
@@ -248,6 +252,7 @@ depends-member:
 - !private ["12LifeHacksApp8QuestionV", "_findStringSwitchCase"]
 - ["12LifeHacksApp8QuestionV", "body"]
 - ["12LifeHacksApp8QuestionV", "deinit"]
+- ["12LifeHacksApp8QuestionV", "encode"]
 - ["12LifeHacksApp8QuestionV", "id"]
 - ["12LifeHacksApp8QuestionV", "init"]
 - ["12LifeHacksApp8QuestionV", "owner"]
@@ -442,4 +447,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "cea083d9297639eee98c9e680f9b9998"
+interface-hash: "4a893731b3b36dae51f2f2f9f748e5a3"

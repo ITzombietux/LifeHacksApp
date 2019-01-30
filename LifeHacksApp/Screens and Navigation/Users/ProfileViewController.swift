@@ -17,13 +17,17 @@ class ProfileViewController: UIViewController, Stateful {
     
     var user: User?
     var stateController: StateController?
-     var settingsController: SettingsController?
+    var settingsController: SettingsController?
+    
+    private var userRequest: ApiRequest<UsersResource>?
+    private var avatarRequest: ImageRequest?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let user = self.user {
             set(user)
             navigationItem.rightBarButtonItem = nil
+            fetchRemoteData(for: user)
         } else if let user = stateController?.user {
             set(user)
         }
@@ -55,14 +59,6 @@ class ProfileViewController: UIViewController, Stateful {
     }
     
     @IBAction func editWasCanceled(_ segue: UIStoryboardSegue) {}
-
-    
-    private func set(_ user: User) {
-        profilePictureImageView.image = UIImage(named: user.profileImage)
-        nameLabel.text = user.name
-        reputationLabel.text = "\(user.reputation)"
-        aboutMeLabel.text = user.aboutMe
-    }
 }
 
 extension ProfileViewController: EditProfileViewControllerDelegate {
@@ -70,5 +66,35 @@ extension ProfileViewController: EditProfileViewControllerDelegate {
         nameLabel.textColor = UIColor.orange
         reputationLabel.textColor = UIColor.orange
         aboutMeLabel.textColor = UIColor.orange
+    }
+}
+
+private extension ProfileViewController {
+    func set(_ user: User) {
+        nameLabel.text = user.name
+        reputationLabel.text = user.reputation != nil ? "\(user.reputation!)" : ""
+        aboutMeLabel.attributedText = user.aboutMe?.htmlString
+}
+
+    func fetchRemoteData(for user: User) {
+        let resource = UsersResource(id: user.id)
+        let request = ApiRequest(resource: resource)
+        self.userRequest = request
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        request.execute { [weak self] users in
+            guard let user = users?.first else {
+                return
+            }
+            self?.set(user)
+            guard let imageUrl = user.profileImageURL else {
+                return
+            }
+            let imageRequest = ImageRequest(url: imageUrl)
+            self?.avatarRequest = imageRequest
+            imageRequest.execute(withCompletion: { (image) in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                self?.profilePictureImageView.image = image
+            })
+        }
     }
 }

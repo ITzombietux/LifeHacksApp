@@ -64,7 +64,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "dequeueReusableCell"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "name"]
 - ["s28CustomDebugStringConvertibleP", "numberOfSections"]
 - ["s28CustomDebugStringConvertibleP", "numberOfSectionsInTableView"]
 - !private ["s28CustomDebugStringConvertibleP", "question"]
@@ -81,7 +80,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
-- !private ["s17CustomReflectableP", "name"]
 - !private ["s17CustomReflectableP", "row"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "QuestionCell"]
@@ -114,8 +112,11 @@ depends-member:
 - !private ["SE", "count"]
 - !private ["SE", "init"]
 - !private ["SE", "name"]
+- !private ["SE", "owner"]
 - !private ["SE", "row"]
+- !private ["SE", "score"]
 - !private ["SE", "subscript"]
+- !private ["SE", "title"]
 - !private ["SQ", "QuestionCell"]
 - !private ["SQ", "String"]
 - ["SQ", ""]
@@ -141,7 +142,6 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s23ExpressibleByNilLiteralP", "name"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
@@ -152,7 +152,6 @@ depends-member:
 - !private ["SH", "count"]
 - !private ["SH", "dequeueReusableCell"]
 - !private ["SH", "init"]
-- !private ["SH", "name"]
 - ["SH", "numberOfSections"]
 - ["SH", "numberOfSectionsInTableView"]
 - !private ["SH", "question"]
@@ -210,7 +209,6 @@ depends-member:
 - ["So8NSObjectP", "tableView"]
 - !private ["So8NSObjectP", "title"]
 - !private ["So8NSObjectP", "username"]
-- !private ["Sq", "name"]
 - !private ["12LifeHacksApp8QuestionV", "owner"]
 - !private ["12LifeHacksApp8QuestionV", "score"]
 - !private ["12LifeHacksApp8QuestionV", "title"]
@@ -361,7 +359,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "username"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
-- !private ["s21_ObjectiveCBridgeableP", "name"]
 - !private ["s21_ObjectiveCBridgeableP", "row"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s16_SwiftStringViewP", "init"]
@@ -382,7 +379,6 @@ depends-nominal:
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "SH"
@@ -393,7 +389,6 @@ depends-nominal:
 - !private "So8NSCodingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "Sq"
 - !private "12LifeHacksApp8QuestionV"
 - !private "12LifeHacksApp12QuestionCellC"
 - "12LifeHacksApp19QuestionsDataSourceC"

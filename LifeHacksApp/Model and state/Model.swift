@@ -24,7 +24,7 @@ struct User: Equatable, Codable {
     }
 }
 
-struct Question: Decodable {
+struct Question: Codable {
     let id: Int
     let title: String
     let body: String?

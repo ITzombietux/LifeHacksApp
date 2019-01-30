@@ -10,6 +10,7 @@
 		934E9D7E21E58E79009FB17C /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934E9D7D21E58E79009FB17C /* Views.swift */; };
 		934E9D8021E5C979009FB17C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934E9D7F21E5C979009FB17C /* ProfileViewController.swift */; };
 		934E9D8221E5E38F009FB17C /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934E9D8121E5E38F009FB17C /* EditProfileViewController.swift */; };
+		935DF3D52201EDB000C0CE73 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935DF3D42201EDB000C0CE73 /* String.swift */; };
 		937DDA272201646C001EA093 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DDA262201646C001EA093 /* Resources.swift */; };
 		937DDA2922018D8F001EA093 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DDA2822018D8F001EA093 /* NetworkRequest.swift */; };
 		93B18FC321E643BC006DA8DC /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B18FC221E643BC006DA8DC /* Stateful.swift */; };
@@ -39,6 +40,7 @@
 		934E9D7D21E58E79009FB17C /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		934E9D7F21E5C979009FB17C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		934E9D8121E5E38F009FB17C /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		935DF3D42201EDB000C0CE73 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		937DDA262201646C001EA093 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		937DDA2822018D8F001EA093 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		93B18FC221E643BC006DA8DC /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				934E9D7D21E58E79009FB17C /* Views.swift */,
 				93B18FC621E730ED006DA8DC /* UIColor.swift */,
 				93B18FC821E7317D006DA8DC /* UINavigationBar.swift */,
+				935DF3D42201EDB000C0CE73 /* String.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			files = (
 				93B18FCB21E78250006DA8DC /* TopQuestionsViewController.swift in Sources */,
 				934E9D8021E5C979009FB17C /* ProfileViewController.swift in Sources */,
+				935DF3D52201EDB000C0CE73 /* String.swift in Sources */,
 				93B18FC321E643BC006DA8DC /* Stateful.swift in Sources */,
 				93B18FD921E9C1E1006DA8DC /* SettingsController.swift in Sources */,
 				93B18FC521E647BD006DA8DC /* MainTabBarController.swift in Sources */,
