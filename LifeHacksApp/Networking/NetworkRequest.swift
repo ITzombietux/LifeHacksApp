@@ -51,6 +51,13 @@ class ApiRequest<Resource : ApiResource> {
     init(resource: Resource) {
         self.resource = resource
     }
+    
+    func fakeUpload(notifyingOn notificationCenter: NotificationCenter) {
+        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { [weak self] _ in
+            notificationCenter.post(name: UploadNotification.completed.name, object: self)
+        }
+    }
+
 }
 
 extension ApiRequest: NetworkRequest {
@@ -64,3 +71,11 @@ extension ApiRequest: NetworkRequest {
     }
 }
 
+enum UploadNotification: String {
+    case completed
+    case failed
+    
+    var name: Notification.Name {
+        return Notification.Name(rawValue)
+    }
+}

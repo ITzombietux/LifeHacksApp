@@ -20,6 +20,7 @@ class QuestionViewController: UITableViewController, Stateful {
     var stateController: StateController?
     var question: Question?
     var settingsController: SettingsController?
+    var uploadNotificationCenter: NotificationCenter?
     
     private var questionRequest: ApiRequest<QuestionsResource>?
     private var avatarRequest: ImageRequest?

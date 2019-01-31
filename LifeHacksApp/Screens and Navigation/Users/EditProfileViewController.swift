@@ -21,6 +21,7 @@ class EditProfileViewController: UITableViewController, Stateful {
     var aboutMeDidChange = false
     var stateController: StateController?
     var settingsController: SettingsController?
+    var uploadNotificationCenter: NotificationCenter?
     weak var delegate: EditProfileViewControllerDelegate?
     private var keyboardObservers: [NSObjectProtocol] = []
     

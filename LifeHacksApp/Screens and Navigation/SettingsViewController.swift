@@ -14,6 +14,7 @@ class SettingsViewController: UITableViewController, Stateful {
     
     var stateController: StateController?
     var settingsController: SettingsController?
+    var uploadNotificationCenter: NotificationCenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()

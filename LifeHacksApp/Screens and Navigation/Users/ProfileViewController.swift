@@ -14,13 +14,26 @@ class ProfileViewController: UIViewController, Stateful {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var reputationLabel: UILabel!
     @IBOutlet weak var aboutMeLabel: UILabel!
+    @IBOutlet weak var changeProfilePictureButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     
     var user: User?
     var stateController: StateController?
     var settingsController: SettingsController?
+    var uploadNotificationCenter: NotificationCenter?
     
     private var userRequest: ApiRequest<UsersResource>?
+    private var uploadRequest: ApiRequest<UsersResource>?
     private var avatarRequest: ImageRequest?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        uploadNotificationCenter?.addObserver(forName: UploadNotification.completed.name, object: nil, queue: .main) { [weak self] _ in
+            self?.changeProfilePictureButton.isEnabled = true
+            self?.activityIndicator.stopAnimating()
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -59,6 +72,19 @@ class ProfileViewController: UIViewController, Stateful {
     }
     
     @IBAction func editWasCanceled(_ segue: UIStoryboardSegue) {}
+    
+    @IBAction func uploadProfilePicture(_ sender: AnyObject) {
+        guard let user = stateController?.user,
+            let uploadNotificationCenter = uploadNotificationCenter else {
+                return
+        }
+        changeProfilePictureButton.isEnabled = false
+        activityIndicator.startAnimating()
+        let eesource = UsersResource(id: user.id)
+        let request = ApiRequest(resource: eesource)
+        self.uploadRequest = request
+        request.fakeUpload(notifyingOn: uploadNotificationCenter)
+    }
 }
 
 extension ProfileViewController: EditProfileViewControllerDelegate {

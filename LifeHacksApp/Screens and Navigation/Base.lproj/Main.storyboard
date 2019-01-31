@@ -93,91 +93,6 @@
             </objects>
             <point key="canvasLocation" x="2189.5999999999999" y="134.48275862068968"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="YEr-Bm-iTH">
-            <objects>
-                <viewController id="8a7-Hc-WgV" customClass="ProfileViewController" customModule="LifeHacksApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="otr-Qb-bpI"/>
-                        <viewControllerLayoutGuide type="bottom" id="VhX-jE-uEB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="R3U-ic-kQU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LKz-Kr-ReC" customClass="Views" customModule="LifeHacksApp" customModuleProvider="target">
-                                <rect key="frame" x="115.5" y="88" width="144" height="144"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="144" id="Tac-KP-qTi"/>
-                                    <constraint firstAttribute="height" constant="144" id="r5m-7a-pBh"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="72"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="Wedgewood"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 reputation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k70-Gi-FLo">
-                                <rect key="frame" x="24" y="293" width="327" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                <color key="textColor" name="Gray Chateau"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdl-nj-LEH">
-                                <rect key="frame" x="24" y="256" width="327" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
-                                <color key="textColor" name="Cloud Burst"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNG-zy-tIR">
-                                <rect key="frame" x="24" y="336.5" width="327" height="134"/>
-                                <string key="text">The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together. This improvement upon the original usage was introduced by no less a man than Stubb, in order to afford the imperilled harpooneer the strongest possible guarantee for the faithfulness and vigilance of his monkey-rope holder.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" name="Cloud Burst"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="LKz-Kr-ReC" firstAttribute="centerX" secondItem="R3U-ic-kQU" secondAttribute="centerX" id="048-aM-bsZ"/>
-                            <constraint firstItem="YNG-zy-tIR" firstAttribute="top" secondItem="k70-Gi-FLo" secondAttribute="bottom" constant="24" id="42E-hs-RsV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kdl-nj-LEH" secondAttribute="trailing" id="9Cy-Ar-UWp"/>
-                            <constraint firstItem="k70-Gi-FLo" firstAttribute="leading" secondItem="R3U-ic-kQU" secondAttribute="leadingMargin" id="JgI-Vp-T1C"/>
-                            <constraint firstItem="k70-Gi-FLo" firstAttribute="top" secondItem="kdl-nj-LEH" secondAttribute="bottom" constant="8" id="Vqd-WX-bVv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YNG-zy-tIR" secondAttribute="trailing" id="YB6-hr-016"/>
-                            <constraint firstItem="kdl-nj-LEH" firstAttribute="top" secondItem="LKz-Kr-ReC" secondAttribute="bottom" constant="24" id="dch-TD-lcJ"/>
-                            <constraint firstItem="LKz-Kr-ReC" firstAttribute="top" secondItem="R3U-ic-kQU" secondAttribute="topMargin" id="lke-dl-DDa"/>
-                            <constraint firstItem="kdl-nj-LEH" firstAttribute="leading" secondItem="R3U-ic-kQU" secondAttribute="leadingMargin" id="rG1-fc-32C"/>
-                            <constraint firstItem="YNG-zy-tIR" firstAttribute="leading" secondItem="R3U-ic-kQU" secondAttribute="leadingMargin" id="v8H-4c-7LB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="k70-Gi-FLo" secondAttribute="trailing" id="yct-tA-DTC"/>
-                        </constraints>
-                        <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
-                        <viewLayoutGuide key="safeArea" id="NyP-1y-pdv"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Profile" id="eFp-nI-vZS">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Aui-u4-4tJ">
-                            <connections>
-                                <segue destination="pRC-uD-vOt" kind="presentation" id="Dfr-D8-wEN"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="aboutMeLabel" destination="YNG-zy-tIR" id="sMQ-cG-yBx"/>
-                        <outlet property="nameLabel" destination="kdl-nj-LEH" id="JU2-UM-9ce"/>
-                        <outlet property="profilePictureImageView" destination="LKz-Kr-ReC" id="wMX-dh-aaH"/>
-                        <outlet property="reputationLabel" destination="k70-Gi-FLo" id="1rM-v1-Z0V"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g10-zH-NYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2190" y="896"/>
-        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="gk0-Zd-8RZ">
             <objects>
@@ -229,7 +144,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8a7-Hc-WgV" kind="relationship" relationship="rootViewController" id="svw-Gv-ISs"/>
+                        <segue destination="JUN-hv-pbt" kind="relationship" relationship="rootViewController" id="dOJ-lw-VfE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cz5-vD-AUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -247,7 +162,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8HC-PT-IPP" kind="relationship" relationship="rootViewController" id="bXK-rV-a9P"/>
+                        <segue destination="8HC-PT-IPP" kind="relationship" relationship="rootViewController" id="FNi-Lm-8vE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6a-uA-FeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -401,7 +316,7 @@
                                             <edgeInsets key="layoutMargins" top="0.0" left="24" bottom="24" right="24"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="8a7-Hc-WgV" kind="show" id="0mi-xf-1B6"/>
+                                            <segue destination="JUN-hv-pbt" kind="show" id="tzM-0R-089"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -623,7 +538,109 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0I-mQ-NLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="k86-Q6-Qaw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4071" y="896"/>
+            <point key="canvasLocation" x="3970" y="896"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="VxN-4F-Gez">
+            <objects>
+                <viewController id="JUN-hv-pbt" customClass="ProfileViewController" customModule="LifeHacksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WuC-tG-WUR"/>
+                        <viewControllerLayoutGuide type="bottom" id="n4Y-8l-WpD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aia-ny-Pkh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zei-ZB-SME" customClass="RoundImageView" customModule="Lifehacks" customModuleProvider="target">
+                                <rect key="frame" x="115.5" y="88" width="144" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="Txa-mw-aBb"/>
+                                    <constraint firstAttribute="width" constant="144" id="frQ-cS-nCg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="72"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="Wedgewood"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 reputation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuT-kf-0sr">
+                                <rect key="frame" x="24" y="293" width="327" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" name="Gray Chateau"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFG-xh-i5z">
+                                <rect key="frame" x="24" y="256" width="327" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <color key="textColor" name="Cloud Burst"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tT-EQ-RcB">
+                                <rect key="frame" x="24" y="336.5" width="327" height="134"/>
+                                <string key="text">The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together. This improvement upon the original usage was introduced by no less a man than Stubb, in order to afford the imperilled harpooneer the strongest possible guarantee for the faithfulness and vigilance of his monkey-rope holder.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="Cloud Burst"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udd-54-sao">
+                                <rect key="frame" x="115.5" y="88" width="144" height="144"/>
+                                <connections>
+                                    <action selector="uploadProfilePicture:" destination="JUN-hv-pbt" eventType="touchUpInside" id="lI0-HP-VWv"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="343-gD-Ez5">
+                                <rect key="frame" x="169" y="141.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zFG-xh-i5z" firstAttribute="top" secondItem="Zei-ZB-SME" secondAttribute="bottom" constant="24" id="1AV-dN-Owp"/>
+                            <constraint firstItem="Udd-54-sao" firstAttribute="height" secondItem="Zei-ZB-SME" secondAttribute="height" id="5nQ-VM-Poc"/>
+                            <constraint firstItem="Zei-ZB-SME" firstAttribute="centerX" secondItem="aia-ny-Pkh" secondAttribute="centerX" id="9Ai-5A-mS0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CuT-kf-0sr" secondAttribute="trailing" id="Aqq-G3-bc8"/>
+                            <constraint firstItem="Udd-54-sao" firstAttribute="centerX" secondItem="Zei-ZB-SME" secondAttribute="centerX" id="DTZ-Jb-J1U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1tT-EQ-RcB" secondAttribute="trailing" id="F36-eS-cLX"/>
+                            <constraint firstItem="CuT-kf-0sr" firstAttribute="leading" secondItem="aia-ny-Pkh" secondAttribute="leadingMargin" id="GMg-f8-faX"/>
+                            <constraint firstItem="1tT-EQ-RcB" firstAttribute="leading" secondItem="aia-ny-Pkh" secondAttribute="leadingMargin" id="KTY-6G-pOZ"/>
+                            <constraint firstItem="1tT-EQ-RcB" firstAttribute="top" secondItem="CuT-kf-0sr" secondAttribute="bottom" constant="24" id="QId-PW-8pE"/>
+                            <constraint firstItem="zFG-xh-i5z" firstAttribute="leading" secondItem="aia-ny-Pkh" secondAttribute="leadingMargin" id="QOx-zw-pPv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zFG-xh-i5z" secondAttribute="trailing" id="Qn7-pU-aKy"/>
+                            <constraint firstItem="343-gD-Ez5" firstAttribute="centerY" secondItem="Udd-54-sao" secondAttribute="centerY" id="T3M-B9-X3J"/>
+                            <constraint firstItem="CuT-kf-0sr" firstAttribute="top" secondItem="zFG-xh-i5z" secondAttribute="bottom" constant="8" id="cfc-u4-NJs"/>
+                            <constraint firstItem="Udd-54-sao" firstAttribute="centerY" secondItem="Zei-ZB-SME" secondAttribute="centerY" id="htk-pm-f0L"/>
+                            <constraint firstItem="343-gD-Ez5" firstAttribute="centerX" secondItem="Udd-54-sao" secondAttribute="centerX" id="r1S-So-WMW"/>
+                            <constraint firstItem="Zei-ZB-SME" firstAttribute="top" secondItem="aia-ny-Pkh" secondAttribute="topMargin" id="v6x-Eo-h2L"/>
+                            <constraint firstItem="Udd-54-sao" firstAttribute="width" secondItem="Zei-ZB-SME" secondAttribute="width" id="xw9-tN-imY"/>
+                        </constraints>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
+                        <viewLayoutGuide key="safeArea" id="S3c-fZ-A5k"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="ZSG-Oa-EYc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="7ui-8g-U13">
+                            <connections>
+                                <segue destination="pRC-uD-vOt" kind="presentation" id="NtV-Wg-RNc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="aboutMeLabel" destination="1tT-EQ-RcB" id="piK-gd-WgP"/>
+                        <outlet property="activityIndicator" destination="343-gD-Ez5" id="F6d-Y0-u8r"/>
+                        <outlet property="changeProfilePictureButton" destination="Udd-54-sao" id="Bgg-Pw-s9d"/>
+                        <outlet property="nameLabel" destination="zFG-xh-i5z" id="QYp-SZ-QXS"/>
+                        <outlet property="profilePictureImageView" destination="Zei-ZB-SME" id="rDy-Gy-isB"/>
+                        <outlet property="reputationLabel" destination="CuT-kf-0sr" id="I4e-kK-FtC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Krf-4I-WYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2190" y="896"/>
         </scene>
     </scenes>
     <resources>
@@ -643,6 +660,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0mi-xf-1B6"/>
+        <segue reference="tzM-0R-089"/>
     </inferredMetricsTieBreakers>
 </document>

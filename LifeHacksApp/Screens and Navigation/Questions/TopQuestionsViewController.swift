@@ -14,6 +14,7 @@ class TopQuestionsViewController: UIViewController, UITableViewDelegate, Statefu
     var questionsDataSource: QuestionsDataSource?
     var stateController: StateController?
     var settingsController: SettingsController?
+    var uploadNotificationCenter: NotificationCenter?
     
     private var request: ApiRequest<QuestionsResource>?
 

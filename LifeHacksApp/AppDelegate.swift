@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let initialViewController = window?.rootViewController as? Stateful {
             initialViewController.stateController = stateController
             initialViewController.settingsController = settingsController
+            initialViewController.uploadNotificationCenter = NotificationCenter()
+            
+            
+
         }
         return true
     }
