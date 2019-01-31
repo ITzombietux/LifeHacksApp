@@ -9,38 +9,50 @@
 import Foundation
 
 class StorageController {
-    private let documentsDirectoryURL = FileManager.default
-        .urls(for: .documentDirectory, in: .userDomainMask)
+    private let cachesDirectoryURL = FileManager.default
+        .urls(for: .cachesDirectory, in: .userDomainMask)
         .first!
     
-    private var userFileURL: URL {
-        return documentsDirectoryURL
-            .appendingPathComponent("User")
-            .appendingPathExtension("plist")
+    func save(topQuestions: [Question]) {
+        save(value: topQuestions)
     }
     
     func fetchTopQuestions() -> [Question]? {
-        guard let dataFileURL = Bundle.main.url(forResource: "Data", withExtension: "plist"),
-            let plistData = try? Data(contentsOf: dataFileURL) else {
-                return nil
-        }
-        let decoder = PropertyListDecoder()
-        return try? decoder.decode([Question].self, from: plistData)
+        return fetch()
     }
     
-    func save(_ user: User) {
-        let encoder = PropertyListEncoder()
-        if let data = try? encoder.encode(user) {
-            try? data.write(to: userFileURL)
-        }
+    func save(user: User) {
+        save(value: user)
     }
     
     func fetchUser() -> User {
-        let defaultUser = User(name: "John Doe", aboutMe: "I am the user of this app", profileImage: "Avatar", reputation: 100)
-        guard let plistData = try? Data(contentsOf: userFileURL) else {
+        let defaultUser = User(id: 0, name: "John Doe", aboutMe: "I am the user of this app", profileImageURL: URL(string: "Avatar")!, reputation: 100)
+        guard let user: User = fetch() else {
             return defaultUser
         }
+        return user
+    }
+}
+
+private extension StorageController {
+    func fileUrl<T>(for type: T.Type) -> URL {
+        return cachesDirectoryURL
+            .appendingPathComponent(String(describing: type))
+            .appendingPathExtension("plist")
+    }
+    
+    func fetch<V: Decodable>() -> V? {
+        guard let plistData = try? Data(contentsOf: fileUrl(for: V.self)) else {
+            return nil
+        }
         let decoder = PropertyListDecoder()
-        return (try? decoder.decode(User.self, from: plistData)) ?? defaultUser
+        return try? decoder.decode(V.self, from: plistData)
+    }
+    
+    func save<V: Encodable> (value: V) {
+        let encoder = PropertyListEncoder()
+        if let plistData = try? encoder.encode(value) {
+            try? plistData.write(to: fileUrl(for: V.self))
+        }
     }
 }

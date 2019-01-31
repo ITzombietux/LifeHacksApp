@@ -30,7 +30,7 @@ extension QuestionsDataSource: UITableViewDataSource {
         let question = self.question(at: indexPath)
         cell.score = question.score
         cell.title = question.title
-        cell.username = question.owner.name
+        cell.username = question.owner?.name
         return cell
     }
 }

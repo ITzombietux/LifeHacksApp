@@ -21,7 +21,7 @@ class QuestionCell: UITableViewCell {
     
     var title: String? {
         didSet {
-            titleLabel.text = title
+            titleLabel.text = title?.htmlString?.string
         }
     }
     
