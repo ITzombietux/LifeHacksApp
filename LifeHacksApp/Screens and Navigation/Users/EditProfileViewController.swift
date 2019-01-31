@@ -12,7 +12,7 @@ protocol EditProfileViewControllerDelegate: class {
     func editProfileViewControllerDidEditProfileInfo(_ viewController: EditProfileViewController)
 }
 
-class EditProfileViewController: UIViewController, Stateful {
+class EditProfileViewController: UITableViewController, Stateful {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var aboutMeTextView: UITextView!
@@ -22,12 +22,23 @@ class EditProfileViewController: UIViewController, Stateful {
     var stateController: StateController?
     var settingsController: SettingsController?
     weak var delegate: EditProfileViewControllerDelegate?
+    private var keyboardObservers: [NSObjectProtocol] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let user = stateController?.user
         nameTextField.text = user?.name
         aboutMeTextView.text = user?.aboutMe
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        registerForKeyboardNotifications()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        keyboardObservers.forEach({ NotificationCenter.default.removeObserver($0) })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,6 +68,25 @@ class EditProfileViewController: UIViewController, Stateful {
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
         return false
+    }
+}
+
+private extension EditProfileViewController {
+    func registerForKeyboardNotifications() {
+        let defaultCenter = NotificationCenter.default
+        let keyboardDidShowObserver = defaultCenter.addObserver(forName: UIResponder.keyboardDidShowNotification, object: nil, queue: nil, using: { [weak self] notification in
+            self?.tableView.contentInset.bottom = notification.keyboardHeight
+        })
+        let keyboardDidHideObserver = defaultCenter.addObserver(forName: UIResponder.keyboardDidHideNotification, object: nil, queue: nil, using: { [weak self] _ in
+            self?.tableView.contentInset.bottom = 0.0
+        })
+        keyboardObservers = [keyboardDidShowObserver, keyboardDidHideObserver]
+    }
+}
+
+extension Notification {
+    var keyboardHeight: CGFloat {
+        return (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height ?? 0.0
     }
 }
 
